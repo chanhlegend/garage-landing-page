@@ -8,25 +8,25 @@ const reasons = [
   {
     no: '01',
     icon: ShieldCheck,
-    title: 'Quality Checked',
+    title: 'Kiểm tra chất lượng',
     desc: 'Mỗi chiếc xe đều được kiểm tra kỹ lưỡng trên 200 hạng mục.',
   },
   {
     no: '02',
     icon: Tag,
-    title: 'Transparent Pricing',
+    title: 'Giá minh bạch',
     desc: 'Giá minh bạch, rõ ràng, không phát sinh chi phí ẩn.',
   },
   {
     no: '03',
     icon: Wrench,
-    title: 'Professional Service',
+    title: 'Dịch vụ chuyên nghiệp',
     desc: 'Đội ngũ kỹ thuật viên giàu kinh nghiệm, tận tâm.',
   },
   {
     no: '04',
     icon: Headset,
-    title: 'After-Sales Support',
+    title: 'Hỗ trợ hậu mãi',
     desc: 'Đồng hành cùng bạn ngay cả sau khi nhận xe.',
   },
 ]
@@ -38,7 +38,7 @@ export function WhyChooseUs() {
         <Reveal>
           <span className="flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.35em] text-primary">
             <span className="h-px w-10 bg-primary" />
-            Why Choose Us
+            Vì Sao Chọn Chúng Tôi
           </span>
         </Reveal>
         <Reveal delay={0.1}>

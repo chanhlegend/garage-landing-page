@@ -29,14 +29,14 @@ export function CtaSection() {
         <Reveal>
           <span className="flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.35em] text-primary">
             <span className="h-px w-10 bg-primary" />
-            Ready When You Are
+            Sẵn Sàng Khi Bạn Cần
           </span>
         </Reveal>
         <Reveal delay={0.1}>
           <h2 className="mt-6 max-w-3xl text-balance font-sans text-5xl font-bold uppercase leading-[0.95] tracking-tight text-foreground md:text-7xl lg:text-8xl">
-            Ready To Find
+            Sẵn Sàng Tìm
             <br />
-            <span className="text-primary">Your Next Car?</span>
+            <span className="text-primary">Chiếc Xe Kế Tiếp?</span>
           </h2>
         </Reveal>
         <Reveal delay={0.2}>

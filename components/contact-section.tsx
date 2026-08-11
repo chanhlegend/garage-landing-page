@@ -28,12 +28,12 @@ export function ContactSection() {
           <Reveal>
             <span className="flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.35em] text-primary">
               <span className="h-px w-10 bg-primary" />
-              Contact
+Liên hệ
             </span>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-5 text-balance font-sans text-4xl font-bold uppercase tracking-tight text-foreground md:text-6xl">
-              Let&apos;s Talk About Your Next Car.
+              Hãy Nói Chuyện Về Chiếc Xe Kế Tiếp Của Bạn.
             </h2>
           </Reveal>
         </div>

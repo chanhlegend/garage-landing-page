@@ -75,7 +75,7 @@ export function SiteFooter() {
 
         <div className="mt-14 border-t border-border pt-6">
           <p className="font-mono text-xs text-muted-foreground">
-            © 2026 APEX MOTORS. All rights reserved.
+            © 2026 APEX MOTORS. Bảo lưu mọi quyền.
           </p>
         </div>
       </div>

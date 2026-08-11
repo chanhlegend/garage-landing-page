@@ -7,38 +7,38 @@ import { Reveal, Stagger, StaggerItem } from '@/components/reveal'
 const services = [
   {
     icon: Search,
-    title: 'Car Inspection',
+    title: 'Kiểm tra xe',
     desc: 'Kiểm tra tình trạng xe toàn diện trên hơn 200 hạng mục kỹ thuật.',
     span: 'lg:col-span-2 lg:row-span-2',
     image: '/cars/car-suv-1.png',
   },
   {
     icon: Wrench,
-    title: 'Maintenance',
+    title: 'Bảo dưỡng',
     desc: 'Bảo dưỡng và chăm sóc xe định kỳ.',
     span: '',
   },
   {
     icon: Sparkles,
-    title: 'Detailing',
+    title: 'Chăm sóc chi tiết',
     desc: 'Vệ sinh và chăm sóc ngoại thất, nội thất.',
     span: '',
   },
   {
     icon: Cog,
-    title: 'Repair',
+    title: 'Sửa chữa',
     desc: 'Sửa chữa và xử lý các vấn đề kỹ thuật.',
     span: '',
   },
   {
     icon: MessageSquare,
-    title: 'Consultation',
+    title: 'Tư vấn',
     desc: 'Tư vấn lựa chọn mẫu xe phù hợp.',
     span: '',
   },
   {
     icon: Repeat,
-    title: 'Trade-in',
+    title: 'Thu mua – đổi xe',
     desc: 'Hỗ trợ thu mua và đổi xe nhanh chóng, giá tốt.',
     span: 'lg:col-span-2',
   },
@@ -52,7 +52,7 @@ export function ServicesSection() {
           <Reveal>
             <span className="flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.35em] text-primary">
               <span className="h-px w-10 bg-primary" />
-              Our Services
+              Dịch vụ của chúng tôi
             </span>
           </Reveal>
           <Reveal delay={0.1}>

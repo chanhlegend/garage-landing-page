@@ -6,9 +6,9 @@ import { ArrowRight, ChevronDown } from 'lucide-react'
 import { Counter } from '@/components/counter'
 
 const stats = [
-  { value: 100, suffix: '+', label: 'Vehicles' },
-  { value: 10, suffix: '+', label: 'Years' },
-  { value: 500, suffix: '+', label: 'Customers' },
+  { value: 100, suffix: '+', label: 'Xe đã bàn giao' },
+  { value: 10, suffix: '+', label: 'Năm kinh nghiệm' },
+  { value: 500, suffix: '+', label: 'Khách hàng' },
 ]
 
 const particles = Array.from({ length: 14 }, (_, i) => ({
@@ -83,11 +83,11 @@ export function Hero() {
           className="mb-6 flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.35em] text-primary"
         >
           <span className="h-px w-10 bg-primary" />
-          Premium Automotive Garage
+          Gara Ô Tô Cao Cấp
         </motion.span>
 
         <h1 className="font-sans text-6xl font-bold uppercase leading-[0.95] tracking-tight text-foreground sm:text-7xl md:text-8xl lg:text-9xl">
-          {['Drive Your', 'Dream.'].map((line, i) => (
+          {['Chạm tay', 'Ước mơ.'].map((line, i) => (
             <span key={line} className="block overflow-hidden">
               <motion.span
                 className="block"
@@ -160,7 +160,7 @@ export function Hero() {
         transition={{ delay: 1.5 }}
         className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-muted-foreground md:flex"
       >
-        <span className="font-mono text-[10px] uppercase tracking-[0.3em]">Scroll</span>
+        <span className="font-mono text-[10px] uppercase tracking-[0.3em]">Cuộn xuống</span>
         <motion.span
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.6, repeat: Number.POSITIVE_INFINITY }}

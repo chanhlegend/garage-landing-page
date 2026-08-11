@@ -46,14 +46,14 @@ export function AboutSection() {
           <Reveal>
             <span className="flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.35em] text-primary">
               <span className="h-px w-10 bg-primary" />
-              About Our Garage
+              Về Gara Của Chúng Tôi
             </span>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-6 text-balance font-sans text-4xl font-bold uppercase leading-[1.05] tracking-tight text-foreground md:text-6xl">
-              More Than A Garage.
+              Hơn Cả Một Gara.
               <br />
-              <span className="text-primary">It&apos;s A Passion.</span>
+              <span className="text-primary">Đó Là Niềm Đam Mê.</span>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>

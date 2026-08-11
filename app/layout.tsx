@@ -16,7 +16,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'APEX MOTORS — Premium Automotive Garage',
+  title: 'APEX MOTORS — Gara Ô Tô Cao Cấp',
   description:
     'Showroom xe cao cấp và dịch vụ chăm sóc ô tô chuyên nghiệp. Khám phá những mẫu xe được tuyển chọn kỹ lưỡng cùng dịch vụ hậu mãi đáng tin cậy.',
   generator: 'v0.app',

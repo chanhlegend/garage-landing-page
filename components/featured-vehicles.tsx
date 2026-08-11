@@ -7,11 +7,11 @@ import { Reveal } from '@/components/reveal'
 import { categories, vehicles, type Vehicle } from '@/lib/vehicles'
 
 export function FeaturedVehicles() {
-  const [active, setActive] = useState<(typeof categories)[number]>('All')
+  const [active, setActive] = useState<(typeof categories)[number]>('Tất cả')
   const trackRef = useRef<HTMLDivElement>(null)
 
   const filtered =
-    active === 'All' ? vehicles : vehicles.filter((v) => v.category === active)
+    active === 'Tất cả' ? vehicles : vehicles.filter((v) => v.category === active)
 
   function scroll(dir: 'left' | 'right') {
     trackRef.current?.scrollBy({ left: dir === 'left' ? -380 : 380, behavior: 'smooth' })
@@ -25,7 +25,7 @@ export function FeaturedVehicles() {
             <Reveal>
               <span className="flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.35em] text-primary">
                 <span className="h-px w-10 bg-primary" />
-                Featured Cars
+                Xe Nổi Bật
               </span>
             </Reveal>
             <Reveal delay={0.1}>

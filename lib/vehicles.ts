@@ -17,7 +17,7 @@ export const vehicles: Vehicle[] = [
     brand: 'BMW',
     model: 'M4 Competition',
     year: 2024,
-    transmission: 'Automatic',
+    transmission: 'Số tự động',
     mileage: '12,000 km',
     fuel: 'Xăng',
     price: '2.9 tỷ',
@@ -29,7 +29,7 @@ export const vehicles: Vehicle[] = [
     brand: 'Mercedes-Benz',
     model: 'S 450 Luxury',
     year: 2023,
-    transmission: 'Automatic',
+    transmission: 'Số tự động',
     mileage: '18,500 km',
     fuel: 'Xăng',
     price: '4.2 tỷ',
@@ -41,7 +41,7 @@ export const vehicles: Vehicle[] = [
     brand: 'Mercedes-Benz',
     model: 'GLE 450 4MATIC',
     year: 2024,
-    transmission: 'Automatic',
+    transmission: 'Số tự động',
     mileage: '8,900 km',
     fuel: 'Xăng',
     price: '3.6 tỷ',
@@ -53,7 +53,7 @@ export const vehicles: Vehicle[] = [
     brand: 'Ford',
     model: 'Ranger Raptor',
     year: 2023,
-    transmission: 'Automatic',
+    transmission: 'Số tự động',
     mileage: '24,000 km',
     fuel: 'Dầu',
     price: '1.35 tỷ',
@@ -77,7 +77,7 @@ export const vehicles: Vehicle[] = [
     brand: 'Porsche',
     model: 'Cayenne Coupé',
     year: 2023,
-    transmission: 'Automatic',
+    transmission: 'Số tự động',
     mileage: '15,700 km',
     fuel: 'Xăng',
     price: '5.4 tỷ',
@@ -86,4 +86,4 @@ export const vehicles: Vehicle[] = [
   },
 ]
 
-export const categories = ['All', 'Sedan', 'SUV', 'Coupe', 'Pickup'] as const
+export const categories = ['Tất cả', 'Sedan', 'SUV', 'Coupe', 'Pickup'] as const
