@@ -1,0 +1,82 @@
+'use client'
+
+import { motion } from 'motion/react'
+import { Check } from 'lucide-react'
+import { Reveal } from '@/components/reveal'
+import { Counter } from '@/components/counter'
+
+const features = [
+  'Xe được kiểm tra kỹ lưỡng trước khi bàn giao',
+  'Tư vấn minh bạch, không chi phí ẩn',
+  'Dịch vụ hậu mãi chuyên nghiệp, tận tâm',
+]
+
+export function AboutSection() {
+  return (
+    <section id="about" className="relative overflow-hidden py-24 md:py-32">
+      <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 md:px-8 lg:grid-cols-2 lg:gap-20">
+        {/* Image with reveal mask */}
+        <motion.div
+          initial={{ clipPath: 'inset(0 100% 0 0)' }}
+          whileInView={{ clipPath: 'inset(0 0% 0 0)' }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          className="relative"
+        >
+          <div className="relative overflow-hidden rounded-xl border border-border">
+            <img
+              src="/cars/about.png"
+              alt="Không gian showroom và xưởng dịch vụ của gara"
+              className="aspect-[4/5] w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+          </div>
+          <div className="glass absolute -bottom-6 -right-4 rounded-xl border border-border px-7 py-5 md:-right-8">
+            <div className="font-sans text-4xl font-bold text-primary">
+              <Counter to={10} />+
+            </div>
+            <div className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+              Năm kinh nghiệm
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Text */}
+        <div>
+          <Reveal>
+            <span className="flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.35em] text-primary">
+              <span className="h-px w-10 bg-primary" />
+              About Our Garage
+            </span>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <h2 className="mt-6 text-balance font-sans text-4xl font-bold uppercase leading-[1.05] tracking-tight text-foreground md:text-6xl">
+              More Than A Garage.
+              <br />
+              <span className="text-primary">It&apos;s A Passion.</span>
+            </h2>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <p className="mt-6 max-w-lg text-pretty font-mono leading-relaxed text-muted-foreground">
+              Gara được xây dựng với mục tiêu mang đến trải nghiệm mua xe và chăm sóc xe chuyên
+              nghiệp, minh bạch và đáng tin cậy. Mỗi chiếc xe là một cam kết về chất lượng.
+            </p>
+          </Reveal>
+
+          <div className="mt-8 flex flex-col gap-4">
+            {features.map((f, i) => (
+              <Reveal key={f} delay={0.3 + i * 0.1} direction="left">
+                <div className="flex items-center gap-4">
+                  <span className="grid size-8 shrink-0 place-items-center rounded-full bg-primary/15 text-primary">
+                    <Check className="size-4" />
+                  </span>
+                  <span className="font-mono text-sm text-foreground">{f}</span>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
