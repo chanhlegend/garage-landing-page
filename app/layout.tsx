@@ -16,10 +16,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'APEX MOTORS — Gara Ô Tô Cao Cấp',
+  title: 'Xe Chuyên Dụng Sài Gòn — Xe Cẩu, Xe Ép Rác, Xe Chở Rác, Xe Hút Bể Phốt',
   description:
-    'Showroom xe cao cấp và dịch vụ chăm sóc ô tô chuyên nghiệp. Khám phá những mẫu xe được tuyển chọn kỹ lưỡng cùng dịch vụ hậu mãi đáng tin cậy.',
-  generator: 'v0.app',
+    'Đơn vị chuyên cung cấp, phân phối và đóng mới các loại xe chuyên dụng uy tín hàng đầu Sài Gòn: Xe cẩu, xe chở rác, xe ép rác, xe hút bể phốt chất lượng cao.',
 }
 
 export const viewport: Viewport = {

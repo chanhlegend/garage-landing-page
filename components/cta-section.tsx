@@ -17,8 +17,8 @@ export function CtaSection() {
     <section ref={ref} className="relative flex min-h-[80svh] items-center overflow-hidden">
       <motion.div style={{ y }} className="absolute inset-0 -z-10 scale-125">
         <img
-          src="/cars/cta.png"
-          alt="Xe cao cấp chạy trên đường lúc hoàng hôn"
+          src="/cars/120.jpg"
+          alt="Xe cẩu chuyên dụng"
           className="h-full w-full object-cover"
         />
       </motion.div>
@@ -33,7 +33,7 @@ export function CtaSection() {
           </span>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="mt-5 max-w-3xl text-balance font-sans text-3xl font-bold uppercase leading-[0.95] tracking-tight text-foreground sm:mt-6 sm:text-5xl md:text-7xl lg:text-8xl">
+          <h2 className="mt-6 pt-1 max-w-3xl text-balance font-sans text-3xl font-bold uppercase leading-[1.18] tracking-normal text-foreground sm:mt-7 sm:text-5xl md:text-7xl lg:text-8xl">
             Sẵn Sàng Tìm
             <br />
             <span className="text-primary">Chiếc Xe Kế Tiếp?</span>

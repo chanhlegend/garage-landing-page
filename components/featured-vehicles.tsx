@@ -1,20 +1,48 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
-import { ArrowLeft, ArrowRight, Fuel, Gauge, Calendar } from 'lucide-react'
+import {
+  ArrowLeft,
+  ArrowRight,
+  Fuel,
+  Gauge,
+  Calendar,
+  X,
+  Phone,
+  ShieldCheck,
+  ChevronLeft,
+  ChevronRight,
+  Eye,
+} from 'lucide-react'
 import { Reveal } from '@/components/reveal'
 import { categories, vehicles, type Vehicle } from '@/lib/vehicles'
 
 export function FeaturedVehicles() {
-  const [active, setActive] = useState<(typeof categories)[number]>('Tất cả')
+  const [activeCategory, setActiveCategory] = useState<(typeof categories)[number]>('Tất cả')
+  const [selectedVehicle, setSelectedVehicle] = useState<Vehicle | null>(null)
   const trackRef = useRef<HTMLDivElement>(null)
 
   const filtered =
-    active === 'Tất cả' ? vehicles : vehicles.filter((v) => v.category === active)
+    activeCategory === 'Tất cả'
+      ? vehicles
+      : vehicles.filter((v) => v.category === activeCategory)
+
+  // Smooth scroll reset when switching category
+  function handleCategoryChange(cat: (typeof categories)[number]) {
+    setActiveCategory(cat)
+    if (trackRef.current) {
+      trackRef.current.scrollTo({ left: 0, behavior: 'smooth' })
+    }
+  }
 
   function scroll(dir: 'left' | 'right') {
-    trackRef.current?.scrollBy({ left: dir === 'left' ? -380 : 380, behavior: 'smooth' })
+    if (!trackRef.current) return
+    const scrollAmount = trackRef.current.clientWidth * 0.75
+    trackRef.current.scrollBy({
+      left: dir === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth',
+    })
   }
 
   return (
@@ -25,11 +53,11 @@ export function FeaturedVehicles() {
             <Reveal>
               <span className="flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.35em] text-primary">
                 <span className="h-px w-10 bg-primary" aria-hidden="true" />
-                Xe Nổi Bật
+                Danh Mục Xe Chuyên Dụng
               </span>
             </Reveal>
             <Reveal delay={0.1}>
-              <h2 className="mt-4 font-sans text-3xl font-bold uppercase tracking-tight text-foreground sm:mt-5 sm:text-4xl md:text-6xl">
+              <h2 className="mt-6 pt-1 font-sans text-3xl font-bold uppercase leading-[1.25] tracking-normal text-foreground sm:mt-7 sm:text-4xl md:text-6xl">
                 Những mẫu xe nổi bật
               </h2>
             </Reveal>
@@ -56,27 +84,27 @@ export function FeaturedVehicles() {
           </Reveal>
         </div>
 
-        {/* Filters */}
+        {/* Category Filters */}
         <Reveal delay={0.2}>
           <div className="mt-7 flex overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden flex-nowrap sm:flex-wrap sm:pb-0 gap-2">
             {categories.map((cat) => (
               <button
                 key={cat}
                 type="button"
-                onClick={() => setActive(cat)}
-                className="relative shrink-0 rounded-md px-4 py-2 font-mono text-xs font-medium uppercase tracking-wide transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary sm:px-5 sm:text-sm"
+                onClick={() => handleCategoryChange(cat)}
+                className="relative shrink-0 rounded-md px-4 py-2.5 font-mono text-xs font-medium uppercase tracking-wide transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary sm:px-5 sm:text-sm"
               >
-                {active === cat && (
+                {activeCategory === cat && (
                   <motion.span
                     layoutId="filter-pill"
                     className="absolute inset-0 rounded-md bg-primary"
-                    transition={{ type: 'spring', stiffness: 400, damping: 32 }}
+                    transition={{ type: 'spring', stiffness: 500, damping: 35 }}
                   />
                 )}
                 <span
                   className={
-                    active === cat
-                      ? 'relative text-primary-foreground'
+                    activeCategory === cat
+                      ? 'relative text-primary-foreground font-semibold'
                       : 'relative text-muted-foreground hover:text-foreground'
                   }
                 >
@@ -88,71 +116,145 @@ export function FeaturedVehicles() {
         </Reveal>
       </div>
 
-      {/* Carousel */}
-      <div
-        ref={trackRef}
-        className="mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-4 pb-6 sm:mt-10 sm:gap-6 sm:px-6 md:px-8 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      {/* Vehicles Carousel Container with hardware accelerated transitions */}
+      <motion.div
+        layout="position"
+        className="relative mt-8 sm:mt-10"
       >
-        <AnimatePresence mode="popLayout">
+        <motion.div
+          ref={trackRef}
+          key={activeCategory}
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -15 }}
+          transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+          className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-4 pb-6 sm:gap-6 sm:px-6 md:px-8 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        >
           {filtered.map((v, i) => (
-            <VehicleCard key={v.id} vehicle={v} index={i} />
+            <VehicleCard
+              key={v.id}
+              vehicle={v}
+              index={i}
+              onSelect={() => setSelectedVehicle(v)}
+            />
           ))}
-        </AnimatePresence>
-      </div>
+        </motion.div>
+      </motion.div>
+
+      {/* Vehicle Details Modal */}
+      <AnimatePresence>
+        {selectedVehicle && (
+          <VehicleDetailModal
+            vehicle={selectedVehicle}
+            onClose={() => setSelectedVehicle(null)}
+          />
+        )}
+      </AnimatePresence>
     </section>
   )
 }
 
-function VehicleCard({ vehicle, index }: { vehicle: Vehicle; index: number }) {
+function VehicleCard({
+  vehicle,
+  index,
+  onSelect,
+}: {
+  vehicle: Vehicle
+  index: number
+  onSelect: () => void
+}) {
+  const [currentImgIndex, setCurrentImgIndex] = useState(0)
+  const images = vehicle.images && vehicle.images.length > 0 ? vehicle.images : [vehicle.image]
+
+  // Reset img index when vehicle changes
+  useEffect(() => {
+    setCurrentImgIndex(0)
+  }, [vehicle.id])
+
   return (
     <motion.article
-      layout
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 0.95 }}
-      transition={{ duration: 0.5, delay: index * 0.06, ease: [0.22, 1, 0.36, 1] }}
-      className="group relative w-[280px] shrink-0 snap-start overflow-hidden rounded-xl border border-border bg-card transition-colors duration-500 hover:border-primary/60 sm:w-[320px] md:w-[360px]"
+      initial={{ opacity: 0, scale: 0.96 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.3,
+        delay: Math.min(index * 0.03, 0.2),
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      className="group relative w-[290px] shrink-0 snap-start overflow-hidden rounded-xl border border-border bg-card transition-all duration-300 hover:border-primary/60 hover:shadow-lg sm:w-[330px] md:w-[360px]"
     >
-      <div className="relative aspect-[16/11] overflow-hidden">
-        <img
-          src={vehicle.image || '/placeholder.svg'}
-          alt={`${vehicle.brand} ${vehicle.model}`}
-          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+      {/* Image Showcase with 3-image switcher */}
+      <div className="relative aspect-[16/11] overflow-hidden bg-muted">
+        <motion.img
+          key={currentImgIndex}
+          initial={{ opacity: 0.6 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.25 }}
+          src={images[currentImgIndex]}
+          alt={`${vehicle.brand} ${vehicle.model} - Ảnh ${currentImgIndex + 1}`}
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-card via-card/10 to-transparent opacity-80" />
-        <span className="absolute left-4 top-4 rounded-md bg-background/70 px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-widest text-foreground backdrop-blur">
+
+        {/* Category badge */}
+        <span className="absolute left-4 top-4 rounded-md bg-background/80 px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-widest text-foreground backdrop-blur">
           {vehicle.category}
         </span>
+
+        {/* 3 Images Indicator Dots */}
+        {images.length > 1 && (
+          <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full bg-background/65 px-2.5 py-1 backdrop-blur-md">
+            {images.map((_, idx) => (
+              <button
+                key={idx}
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation()
+                  setCurrentImgIndex(idx)
+                }}
+                aria-label={`Xem ảnh ${idx + 1} của xe ${vehicle.model}`}
+                className={`size-2 rounded-full transition-all duration-300 ${
+                  idx === currentImgIndex
+                    ? 'w-4 bg-primary'
+                    : 'bg-foreground/40 hover:bg-foreground/80'
+                }`}
+              />
+            ))}
+          </div>
+        )}
       </div>
 
+      {/* Content */}
       <div className="p-6">
         <p className="font-mono text-xs uppercase tracking-widest text-primary">{vehicle.brand}</p>
-        <h3 className="mt-1 font-sans text-2xl font-bold uppercase tracking-tight text-foreground">
+        <h3 className="mt-1 font-sans text-xl font-bold uppercase tracking-tight text-foreground line-clamp-1">
           {vehicle.model}
         </h3>
 
-        <div className="mt-5 grid grid-cols-3 gap-2 border-y border-border py-4">
+        {/* Specs grid */}
+        <div className="mt-4 grid grid-cols-3 gap-2 border-y border-border py-3.5">
           <Spec icon={<Calendar className="size-4" aria-hidden="true" />} value={String(vehicle.year)} />
           <Spec icon={<Gauge className="size-4" aria-hidden="true" />} value={vehicle.mileage} />
           <Spec icon={<Fuel className="size-4" aria-hidden="true" />} value={vehicle.fuel} />
         </div>
 
+        {/* Price & Action */}
         <div className="mt-5 flex items-end justify-between">
           <div>
             <p className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-              Giá bán
+              Giá tham khảo
             </p>
-            <p className="font-sans text-2xl font-bold text-foreground">
-              {vehicle.price} <span className="text-sm text-muted-foreground">VNĐ</span>
+            <p className="font-sans text-xl font-bold text-foreground sm:text-2xl">
+              {vehicle.price}
             </p>
           </div>
-          <a
-            href="#contact"
+          <button
+            type="button"
+            onClick={onSelect}
             className="group/btn flex items-center gap-1.5 rounded-md bg-secondary px-4 py-2.5 font-mono text-xs font-semibold uppercase tracking-wide text-foreground transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
           >
-            Xem xe
-            <ArrowRight className="size-3.5 transition-transform group-hover/btn:translate-x-1" aria-hidden="true" />
-          </a>
+            Xem xe (3 ảnh)
+            <Eye className="size-3.5 transition-transform group-hover/btn:scale-110" aria-hidden="true" />
+          </button>
         </div>
       </div>
     </motion.article>
@@ -161,9 +263,194 @@ function VehicleCard({ vehicle, index }: { vehicle: Vehicle; index: number }) {
 
 function Spec({ icon, value }: { icon: React.ReactNode; value: string }) {
   return (
-    <div className="flex flex-col items-center gap-1.5 text-center">
+    <div className="flex flex-col items-center gap-1 text-center">
       <span className="text-primary">{icon}</span>
-      <span className="font-mono text-xs text-muted-foreground">{value}</span>
+      <span className="font-mono text-xs text-muted-foreground line-clamp-1">{value}</span>
+    </div>
+  )
+}
+
+function VehicleDetailModal({
+  vehicle,
+  onClose,
+}: {
+  vehicle: Vehicle
+  onClose: () => void
+}) {
+  const images = vehicle.images && vehicle.images.length > 0 ? vehicle.images : [vehicle.image]
+  const [activeImgIdx, setActiveImgIdx] = useState(0)
+
+  function prevImage() {
+    setActiveImgIdx((prev) => (prev === 0 ? images.length - 1 : prev - 1))
+  }
+
+  function nextImage() {
+    setActiveImgIdx((prev) => (prev === images.length - 1 ? 0 : prev + 1))
+  }
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10">
+      {/* Backdrop */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        onClick={onClose}
+        className="absolute inset-0 bg-background/80 backdrop-blur-md"
+      />
+
+      {/* Modal Card */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95, y: 15 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        exit={{ opacity: 0, scale: 0.95, y: 15 }}
+        transition={{ type: 'spring', damping: 28, stiffness: 350 }}
+        className="relative z-10 max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-2xl border border-border bg-card p-6 shadow-2xl sm:p-8"
+      >
+        {/* Close Button */}
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Đóng bảng chi tiết"
+          className="absolute right-4 top-4 grid size-10 place-items-center rounded-full bg-secondary text-foreground transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none"
+        >
+          <X className="size-5" />
+        </button>
+
+        <div className="grid gap-8 lg:grid-cols-12 lg:items-start">
+          {/* Main Image Slider with 3 Images */}
+          <div className="lg:col-span-7">
+            <div className="relative aspect-[16/11] overflow-hidden rounded-xl bg-muted border border-border">
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={activeImgIdx}
+                  initial={{ opacity: 0, scale: 0.98 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 1.02 }}
+                  transition={{ duration: 0.2 }}
+                  src={images[activeImgIdx]}
+                  alt={`${vehicle.model} - Photo ${activeImgIdx + 1}`}
+                  className="h-full w-full object-cover"
+                />
+              </AnimatePresence>
+
+              {/* Slider Arrows */}
+              {images.length > 1 && (
+                <>
+                  <button
+                    type="button"
+                    onClick={prevImage}
+                    aria-label="Ảnh trước"
+                    className="absolute left-3 top-1/2 -translate-y-1/2 grid size-9 place-items-center rounded-full bg-background/70 text-foreground backdrop-blur hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
+                    <ChevronLeft className="size-5" />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={nextImage}
+                    aria-label="Ảnh tiếp theo"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 grid size-9 place-items-center rounded-full bg-background/70 text-foreground backdrop-blur hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
+                    <ChevronRight className="size-5" />
+                  </button>
+                </>
+              )}
+
+              <span className="absolute bottom-3 left-3 rounded-md bg-background/80 px-2.5 py-1 font-mono text-xs font-semibold text-foreground backdrop-blur">
+                Ảnh {activeImgIdx + 1} / {images.length}
+              </span>
+            </div>
+
+            {/* 3 Thumbnails selector */}
+            <div className="mt-4 grid grid-cols-3 gap-3">
+              {images.map((img, idx) => (
+                <button
+                  key={idx}
+                  type="button"
+                  onClick={() => setActiveImgIdx(idx)}
+                  className={`relative aspect-[16/11] overflow-hidden rounded-lg border-2 transition-all duration-300 ${
+                    idx === activeImgIdx
+                      ? 'border-primary ring-2 ring-primary/40'
+                      : 'border-border opacity-60 hover:opacity-100'
+                  }`}
+                >
+                  <img
+                    src={img}
+                    alt={`Thumbnail ${idx + 1}`}
+                    className="h-full w-full object-cover"
+                  />
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Vehicle Info & Specifications */}
+          <div className="flex flex-col lg:col-span-5">
+            <div>
+              <span className="rounded-md bg-primary/15 px-3 py-1 font-mono text-xs font-semibold uppercase tracking-wider text-primary">
+                {vehicle.category}
+              </span>
+              <p className="mt-3 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                Hãng xe: <strong className="text-foreground">{vehicle.brand}</strong>
+              </p>
+              <h2 className="mt-1 font-sans text-2xl font-bold uppercase tracking-tight text-foreground sm:text-3xl">
+                {vehicle.model}
+              </h2>
+            </div>
+
+            <p className="mt-4 font-mono text-xs leading-relaxed text-muted-foreground">
+              {vehicle.description}
+            </p>
+
+            {/* Specs Table */}
+            <div className="mt-6 divide-y divide-border rounded-xl border border-border bg-background/50 p-4 font-mono text-xs">
+              <div className="flex justify-between py-2">
+                <span className="text-muted-foreground">Năm sản xuất</span>
+                <span className="font-semibold text-foreground">{vehicle.year}</span>
+              </div>
+              <div className="flex justify-between py-2">
+                <span className="text-muted-foreground">Tình trạng</span>
+                <span className="font-semibold text-foreground">{vehicle.mileage}</span>
+              </div>
+              <div className="flex justify-between py-2">
+                <span className="text-muted-foreground">Hộp số</span>
+                <span className="font-semibold text-foreground">{vehicle.transmission}</span>
+              </div>
+              <div className="flex justify-between py-2">
+                <span className="text-muted-foreground">Nhiên liệu</span>
+                <span className="font-semibold text-foreground">{vehicle.fuel}</span>
+              </div>
+              <div className="flex justify-between py-2">
+                <span className="text-muted-foreground">Bảo hành</span>
+                <span className="font-semibold text-primary">Chính hãng / 36 Tháng</span>
+              </div>
+            </div>
+
+            {/* Price & Contact buttons */}
+            <div className="mt-6">
+              <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                Giá bán dự kiến
+              </p>
+              <p className="font-sans text-3xl font-bold text-foreground">{vehicle.price}</p>
+            </div>
+
+            <div className="mt-6 flex flex-col gap-3">
+              <a
+                href="#contact"
+                onClick={onClose}
+                className="flex items-center justify-center gap-2 rounded-md bg-primary px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wide text-primary-foreground transition-shadow hover:shadow-[0_0_20px_-2px] hover:shadow-primary"
+              >
+                <Phone className="size-4" />
+                Tư vấn & Nhận báo giá ngay
+              </a>
+              <div className="flex items-center justify-center gap-2 text-center font-mono text-[11px] text-muted-foreground">
+                <ShieldCheck className="size-4 text-primary" />
+                Cam kết xe nguyên bản, giấy tờ đầy đủ
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
     </div>
   )
 }

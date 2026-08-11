@@ -46,8 +46,8 @@ export function Hero() {
       {/* Background */}
       <motion.div style={{ x: imgX, y: imgY }} className="absolute inset-0 -z-10 scale-110">
         <img
-          src="/cars/hero.png"
-          alt="Xe thể thao cao cấp trong showroom"
+          src="/cars/z7958350577287_0f3a2ae7c592dd343f9be45d9f2b96a1.jpg"
+          alt="Xe chuyên dụng cao cấp"
           className="animate-ken-burns h-full w-full object-cover"
         />
       </motion.div>
@@ -83,12 +83,12 @@ export function Hero() {
           className="mb-4 flex items-center gap-2.5 font-mono text-[11px] font-medium uppercase tracking-[0.25em] text-primary sm:mb-6 sm:gap-3 sm:text-xs sm:tracking-[0.35em]"
         >
           <span className="h-px w-8 bg-primary sm:w-10" aria-hidden="true" />
-          Gara Ô Tô Cao Cấp
+          Xe Chuyên Dụng Sài Gòn
         </motion.span>
 
-        <h1 className="font-sans text-4xl font-bold uppercase leading-[0.95] tracking-tight text-foreground xs:text-5xl sm:text-7xl md:text-8xl lg:text-9xl">
-          {['Chạm tay', 'Ước mơ.'].map((line, i) => (
-            <span key={line} className="block overflow-hidden">
+        <h1 className="font-sans text-4xl font-bold uppercase leading-[1.18] tracking-normal text-foreground xs:text-5xl sm:text-7xl md:text-8xl lg:text-9xl">
+          {['Xe Chuyên Dụng', 'Hàng Đầu.'].map((line, i) => (
+            <span key={line} className="block overflow-hidden py-1">
               <motion.span
                 className="block"
                 initial={{ y: '110%' }}
@@ -107,7 +107,7 @@ export function Hero() {
           transition={{ delay: 0.8, duration: 0.6 }}
           className="mt-5 max-w-md text-pretty font-mono text-sm leading-relaxed text-muted-foreground sm:mt-7 sm:text-base"
         >
-          Khám phá những mẫu xe được tuyển chọn kỹ lưỡng cùng dịch vụ chăm sóc ô tô chuyên nghiệp.
+          Khám phá giải pháp xe cẩu, xe chở rác, xe ép rác, xe hút bể phốt chất lượng cao cùng dịch vụ bảo hành, đóng mới chuyên nghiệp tại Sài Gòn.
         </motion.p>
 
         <motion.div

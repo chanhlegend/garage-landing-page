@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 import { Menu, Phone, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { Logo } from '@/components/logo'
 
 const navItems = [
   { label: 'Trang chủ', href: '#home' },
@@ -48,9 +49,9 @@ export function SiteHeader() {
       <div className="mx-auto flex h-18 w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6 md:px-8">
         <a
           href="#home"
-          className="shrink-0 font-sans text-2xl font-bold uppercase tracking-widest text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+          className="shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg"
         >
-          APEX<span className="text-primary">.</span>
+          <Logo size="md" />
         </a>
 
         <nav className="hidden items-center gap-9 lg:flex">
@@ -101,9 +102,7 @@ export function SiteHeader() {
             className="fixed inset-0 z-50 flex flex-col bg-background/95 backdrop-blur-2xl lg:hidden"
           >
             <div className="flex h-18 items-center justify-between px-5 py-4">
-              <span className="font-sans text-2xl font-bold uppercase tracking-widest">
-                APEX<span className="text-primary">.</span>
-              </span>
+              <Logo size="md" />
               <button
                 type="button"
                 aria-label="Đóng menu"

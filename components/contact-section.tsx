@@ -8,7 +8,7 @@ import { Reveal } from '@/components/reveal'
 const info = [
   { icon: MapPin, label: 'Địa chỉ', value: '128 Nguyễn Văn Linh, Q.7, TP.HCM' },
   { icon: Phone, label: 'Hotline', value: '0909 888 666' },
-  { icon: Mail, label: 'Email', value: 'sales@apexmotors.vn' },
+  { icon: Mail, label: 'Email', value: 'sales@xechuyendungsaigon.vn' },
   { icon: Clock, label: 'Giờ làm việc', value: '08:00 – 20:00 (T2 – CN)' },
 ]
 
@@ -32,7 +32,7 @@ export function ContactSection() {
             </span>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="mt-4 text-balance font-sans text-3xl font-bold uppercase tracking-tight text-foreground sm:mt-5 sm:text-4xl md:text-6xl">
+            <h2 className="mt-6 pt-1 text-balance font-sans text-3xl font-bold uppercase leading-[1.25] tracking-normal text-foreground sm:mt-7 sm:text-4xl md:text-6xl">
               Hãy Nói Chuyện Về Chiếc Xe Kế Tiếp Của Bạn.
             </h2>
           </Reveal>
@@ -41,18 +41,20 @@ export function ContactSection() {
         <div className="mt-10 grid gap-10 sm:mt-14 lg:grid-cols-2 lg:gap-16">
           {/* Left: info */}
           <div>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-3.5 grid-cols-1">
               {info.map((item, i) => (
                 <Reveal key={item.label} delay={i * 0.08} direction="left">
-                  <div className="flex h-full items-start gap-4 rounded-xl border border-border bg-card p-5">
+                  <div className="flex h-full items-center gap-4 rounded-xl border border-border bg-card p-4 sm:px-5 sm:py-4">
                     <span className="grid size-10 shrink-0 place-items-center rounded-md bg-primary/15 text-primary">
                       <item.icon className="size-5" aria-hidden="true" />
                     </span>
-                    <div>
+                    <div className="flex-1">
                       <p className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
                         {item.label}
                       </p>
-                      <p className="mt-1 font-mono text-sm text-foreground">{item.value}</p>
+                      <p className="mt-0.5 font-mono text-xs sm:text-sm font-semibold text-foreground whitespace-nowrap">
+                        {item.value}
+                      </p>
                     </div>
                   </div>
                 </Reveal>

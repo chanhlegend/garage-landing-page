@@ -25,17 +25,17 @@ export function AboutSection() {
         >
           <div className="relative overflow-hidden rounded-xl border border-border">
             <img
-              src="/cars/about.png"
-              alt="Không gian showroom và xưởng dịch vụ của gara APEX MOTORS"
+              src="/cars/z7980592847072_3bf985667d9b9f3279110d80cee35113.jpg"
+              alt="Gara ô tô chuyên dụng chất lượng cao"
               className="aspect-[4/5] w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
           </div>
-          <div className="glass absolute -bottom-5 right-2 rounded-xl border border-border px-5 py-4 sm:-bottom-6 sm:-right-4 sm:px-7 sm:py-5 md:-right-8">
+          <div className="glass absolute bottom-4 right-4 z-10 rounded-xl border border-border/80 bg-background/85 px-5 py-3.5 shadow-2xl backdrop-blur-md sm:bottom-6 sm:right-6 sm:px-6 sm:py-4">
             <div className="font-sans text-3xl font-bold text-primary sm:text-4xl">
               <Counter to={10} />+
             </div>
-            <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground sm:text-xs">
+            <div className="font-mono text-[10px] font-semibold uppercase tracking-widest text-muted-foreground sm:text-xs whitespace-nowrap">
               Năm kinh nghiệm
             </div>
           </div>
@@ -46,20 +46,19 @@ export function AboutSection() {
           <Reveal>
             <span className="flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.35em] text-primary">
               <span className="h-px w-10 bg-primary" aria-hidden="true" />
-              Về Gara Của Chúng Tôi
+              Về Xe Chuyên Dụng Sài Gòn
             </span>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="mt-5 text-balance font-sans text-3xl font-bold uppercase leading-[1.05] tracking-tight text-foreground sm:mt-6 sm:text-4xl md:text-6xl">
-              Hơn Cả Một Gara.
+            <h2 className="mt-6 pt-1 text-balance font-sans text-3xl font-bold uppercase leading-[1.25] tracking-normal text-foreground sm:mt-7 sm:text-4xl md:text-6xl">
+              Chất Lượng Vượt Trội.
               <br />
-              <span className="text-primary">Đó Là Niềm Đam Mê.</span>
+              <span className="text-primary">Uy Tín Hàng Đầu Sài Gòn.</span>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
             <p className="mt-6 max-w-lg text-pretty font-mono leading-relaxed text-muted-foreground">
-              Gara được xây dựng với mục tiêu mang đến trải nghiệm mua xe và chăm sóc xe chuyên
-              nghiệp, minh bạch và đáng tin cậy. Mỗi chiếc xe là một cam kết về chất lượng.
+              Xe Chuyên Dụng Sài Gòn tự hào là đơn vị uy tín hàng đầu trong lĩnh vực nhập khẩu, phân phối và đóng mới các chủng loại xe môi trường, xe cẩu, xe ép rác, xe hút bể phốt chuyên dụng.
             </p>
           </Reveal>
 

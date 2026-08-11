@@ -10,7 +10,7 @@ const services = [
     title: 'Kiểm tra xe',
     desc: 'Kiểm tra tình trạng xe toàn diện trên hơn 200 hạng mục kỹ thuật.',
     span: 'sm:col-span-2 lg:col-span-2 lg:row-span-2',
-    image: '/cars/car-suv-1.png',
+    image: '/cars/rftn.jpg',
   },
   {
     icon: Wrench,
@@ -56,7 +56,7 @@ export function ServicesSection() {
             </span>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="mt-4 font-sans text-3xl font-bold uppercase tracking-tight text-foreground sm:mt-5 sm:text-4xl md:text-6xl">
+            <h2 className="mt-6 pt-1 font-sans text-3xl font-bold uppercase leading-[1.25] tracking-normal text-foreground sm:mt-7 sm:text-4xl md:text-6xl">
               Dịch vụ của chúng tôi
             </h2>
           </Reveal>
