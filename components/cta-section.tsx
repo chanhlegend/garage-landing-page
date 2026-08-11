@@ -33,31 +33,31 @@ export function CtaSection() {
           </span>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="mt-6 max-w-3xl text-balance font-sans text-5xl font-bold uppercase leading-[0.95] tracking-tight text-foreground md:text-7xl lg:text-8xl">
+          <h2 className="mt-5 max-w-3xl text-balance font-sans text-3xl font-bold uppercase leading-[0.95] tracking-tight text-foreground sm:mt-6 sm:text-5xl md:text-7xl lg:text-8xl">
             Sẵn Sàng Tìm
             <br />
             <span className="text-primary">Chiếc Xe Kế Tiếp?</span>
           </h2>
         </Reveal>
         <Reveal delay={0.2}>
-          <p className="mt-6 max-w-md text-pretty font-mono leading-relaxed text-muted-foreground">
+          <p className="mt-5 max-w-md text-pretty font-mono text-sm leading-relaxed text-muted-foreground sm:mt-6 sm:text-base">
             Liên hệ với chúng tôi để được tư vấn mẫu xe phù hợp với nhu cầu và ngân sách của bạn.
           </p>
         </Reveal>
         <Reveal delay={0.3}>
-          <div className="mt-9 flex flex-wrap gap-4">
+          <div className="mt-7 flex flex-col gap-3.5 sm:mt-9 sm:flex-row sm:flex-wrap sm:gap-4">
             <a
               href="#vehicles"
-              className="group flex items-center gap-2 rounded-md bg-primary px-7 py-3.5 font-mono text-sm font-semibold uppercase tracking-wide text-primary-foreground transition-all hover:shadow-[0_0_30px_-4px] hover:shadow-primary"
+              className="group flex items-center justify-center gap-2 rounded-md bg-primary px-7 py-3.5 font-mono text-sm font-semibold uppercase tracking-wide text-primary-foreground transition-[colors,box-shadow] hover:shadow-[0_0_30px_-4px] hover:shadow-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
               Xem xe ngay
-              <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
             </a>
             <a
               href="#contact"
-              className="flex items-center gap-2 rounded-md border border-border bg-background/30 px-7 py-3.5 font-mono text-sm font-semibold uppercase tracking-wide text-foreground backdrop-blur transition-colors hover:border-primary hover:text-primary"
+              className="flex items-center justify-center gap-2 rounded-md border border-border bg-background/30 px-7 py-3.5 font-mono text-sm font-semibold uppercase tracking-wide text-foreground backdrop-blur transition-colors hover:border-primary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
-              <Phone className="size-4" />
+              <Phone className="size-4" aria-hidden="true" />
               Liên hệ
             </a>
           </div>

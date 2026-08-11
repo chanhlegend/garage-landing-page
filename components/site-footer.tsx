@@ -17,7 +17,7 @@ const socials = [
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-card/40">
-      <div className="mx-auto max-w-7xl px-5 py-16 md:px-8">
+      <div className="mx-auto max-w-7xl px-5 pb-24 pt-16 md:px-8 lg:pb-16">
         <div className="grid gap-10 md:grid-cols-3">
           <div className="max-w-sm">
             <span className="font-sans text-2xl font-bold uppercase tracking-widest text-foreground">
@@ -35,9 +35,9 @@ export function SiteFooter() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="grid size-10 place-items-center rounded-md border border-border text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                  className="grid size-10 place-items-center rounded-md border border-border text-muted-foreground transition-colors hover:border-primary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                 >
-                  <s.icon className="size-4" />
+                  <s.icon className="size-4" aria-hidden="true" />
                 </a>
               ))}
             </div>
@@ -52,7 +52,7 @@ export function SiteFooter() {
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    className="font-mono text-sm text-foreground transition-colors hover:text-primary"
+                    className="font-mono text-sm text-foreground transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                   >
                     {item.label}
                   </a>

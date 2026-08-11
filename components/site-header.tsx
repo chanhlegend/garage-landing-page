@@ -39,16 +39,16 @@ export function SiteHeader() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
       className={cn(
-        'fixed inset-x-0 top-0 z-50 transition-colors duration-500',
+        'fixed inset-x-0 top-0 z-50 w-full overflow-hidden transition-colors duration-500',
         scrolled
           ? 'border-b border-border bg-background/70 backdrop-blur-xl'
           : 'border-b border-transparent bg-transparent',
       )}
     >
-      <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 py-4 md:px-8">
+      <div className="mx-auto flex h-18 w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6 md:px-8">
         <a
           href="#home"
-          className="font-sans text-2xl font-bold uppercase tracking-widest text-foreground"
+          className="shrink-0 font-sans text-2xl font-bold uppercase tracking-widest text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
         >
           APEX<span className="text-primary">.</span>
         </a>
@@ -58,25 +58,25 @@ export function SiteHeader() {
             <a
               key={item.href}
               href={item.href}
-              className="group relative font-mono text-sm font-medium uppercase tracking-wide text-muted-foreground transition-colors hover:text-foreground"
+              className="group relative font-mono text-sm font-medium uppercase tracking-wide text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
               {item.label}
-              <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-primary transition-all duration-300 group-hover:w-full" />
+              <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-primary transition-[width] duration-300 group-hover:w-full" />
             </a>
           ))}
         </nav>
 
-        <div className="flex items-center gap-4">
+        <div className="flex shrink-0 items-center gap-3 sm:gap-4">
           <a
             href={`tel:${HOTLINE.replace(/\s/g, '')}`}
-            className="hidden items-center gap-2 font-mono text-sm text-muted-foreground transition-colors hover:text-foreground md:flex"
+            className="hidden items-center gap-2 font-mono text-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary md:flex"
           >
-            <Phone className="size-4 text-primary" />
+            <Phone className="size-4 text-primary" aria-hidden="true" />
             {HOTLINE}
           </a>
           <a
             href="#contact"
-            className="group hidden items-center gap-2 rounded-md bg-primary px-5 py-2.5 font-mono text-sm font-semibold uppercase tracking-wide text-primary-foreground transition-all hover:shadow-[0_0_24px_-4px] hover:shadow-primary sm:flex"
+            className="group hidden items-center gap-2 rounded-md bg-primary px-5 py-2.5 font-mono text-sm font-semibold uppercase tracking-wide text-primary-foreground transition-[colors,box-shadow] hover:shadow-[0_0_24px_-4px] hover:shadow-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary sm:flex"
           >
             Liên hệ ngay
           </a>
@@ -84,9 +84,9 @@ export function SiteHeader() {
             type="button"
             aria-label="Mở menu"
             onClick={() => setOpen(true)}
-            className="grid size-10 place-items-center rounded-md border border-border text-foreground lg:hidden"
+            className="grid size-10 shrink-0 place-items-center rounded-md border border-border text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary lg:hidden"
           >
-            <Menu className="size-5" />
+            <Menu className="size-5" aria-hidden="true" />
           </button>
         </div>
       </div>
@@ -113,7 +113,7 @@ export function SiteHeader() {
                 <X className="size-5" />
               </button>
             </div>
-            <nav className="flex flex-1 flex-col justify-center gap-2 px-6">
+            <nav className="flex flex-1 flex-col justify-center gap-2 overflow-y-auto px-6 py-6">
               {navItems.map((item, i) => (
                 <motion.a
                   key={item.href}

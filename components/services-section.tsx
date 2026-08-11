@@ -9,7 +9,7 @@ const services = [
     icon: Search,
     title: 'Kiểm tra xe',
     desc: 'Kiểm tra tình trạng xe toàn diện trên hơn 200 hạng mục kỹ thuật.',
-    span: 'lg:col-span-2 lg:row-span-2',
+    span: 'sm:col-span-2 lg:col-span-2 lg:row-span-2',
     image: '/cars/car-suv-1.png',
   },
   {
@@ -40,34 +40,34 @@ const services = [
     icon: Repeat,
     title: 'Thu mua – đổi xe',
     desc: 'Hỗ trợ thu mua và đổi xe nhanh chóng, giá tốt.',
-    span: 'lg:col-span-2',
+    span: 'sm:col-span-2 lg:col-span-2',
   },
 ]
 
 export function ServicesSection() {
   return (
-    <section id="services" className="py-24 md:py-32">
+    <section id="services" className="py-24 scroll-mt-20 md:py-32">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="max-w-2xl">
           <Reveal>
             <span className="flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.35em] text-primary">
-              <span className="h-px w-10 bg-primary" />
+              <span className="h-px w-10 bg-primary" aria-hidden="true" />
               Dịch vụ của chúng tôi
             </span>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="mt-5 font-sans text-4xl font-bold uppercase tracking-tight text-foreground md:text-6xl">
+            <h2 className="mt-4 font-sans text-3xl font-bold uppercase tracking-tight text-foreground sm:mt-5 sm:text-4xl md:text-6xl">
               Dịch vụ của chúng tôi
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mt-5 text-pretty font-mono leading-relaxed text-muted-foreground">
+            <p className="mt-4 text-pretty font-mono text-sm leading-relaxed text-muted-foreground sm:mt-5 sm:text-base">
               Không chỉ bán xe, chúng tôi đồng hành cùng bạn trong suốt quá trình sử dụng.
             </p>
           </Reveal>
         </div>
 
-        <Stagger className="mt-14 grid auto-rows-[200px] grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <Stagger className="mt-10 grid auto-rows-[minmax(190px,auto)] grid-cols-1 gap-4 sm:mt-14 sm:auto-rows-[200px] sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">
           {services.map((s) => (
             <StaggerItem key={s.title} className={s.span}>
               <motion.div
@@ -87,7 +87,7 @@ export function ServicesSection() {
                 )}
                 <div className="relative">
                   <span className="grid size-11 place-items-center rounded-md bg-primary/15 text-primary transition-colors duration-500 group-hover:bg-primary group-hover:text-primary-foreground">
-                    <s.icon className="size-5" />
+                    <s.icon className="size-5" aria-hidden="true" />
                   </span>
                   <h3 className="mt-4 font-sans text-xl font-bold uppercase tracking-tight text-foreground">
                     {s.title}

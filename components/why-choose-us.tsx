@@ -37,29 +37,29 @@ export function WhyChooseUs() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Reveal>
           <span className="flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.35em] text-primary">
-            <span className="h-px w-10 bg-primary" />
+            <span className="h-px w-10 bg-primary" aria-hidden="true" />
             Vì Sao Chọn Chúng Tôi
           </span>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="mt-5 max-w-2xl text-balance font-sans text-4xl font-bold uppercase tracking-tight text-foreground md:text-6xl">
+          <h2 className="mt-4 max-w-2xl text-balance font-sans text-3xl font-bold uppercase tracking-tight text-foreground sm:mt-5 sm:text-4xl md:text-6xl">
             Lý do khách hàng tin chọn chúng tôi
           </h2>
         </Reveal>
 
-        <Stagger className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <Stagger className="mt-10 grid gap-4 sm:mt-14 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">
           {reasons.map((r) => (
             <StaggerItem key={r.no}>
               <motion.div
                 whileHover={{ y: -8 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                className="group relative h-full overflow-hidden rounded-xl border border-border bg-background p-7 transition-colors duration-500 hover:border-primary/60"
+                className="group relative h-full overflow-hidden rounded-xl border border-border bg-background p-5 transition-colors duration-500 hover:border-primary/60 sm:p-7"
               >
                 <div className="absolute inset-0 -z-10 bg-gradient-to-b from-primary/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                <span className="font-sans text-5xl font-bold text-border transition-colors duration-500 group-hover:text-primary/30">
+                <span className="font-sans text-5xl font-bold text-border transition-colors duration-500 group-hover:text-primary/30" aria-hidden="true">
                   {r.no}
                 </span>
-                <r.icon className="mt-6 size-7 text-primary transition-transform duration-500 group-hover:scale-110" />
+                <r.icon className="mt-6 size-7 text-primary transition-transform duration-500 group-hover:scale-110" aria-hidden="true" />
                 <h3 className="mt-5 font-sans text-xl font-bold uppercase tracking-tight text-foreground">
                   {r.title}
                 </h3>

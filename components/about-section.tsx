@@ -13,7 +13,7 @@ const features = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="relative overflow-hidden py-24 md:py-32">
+    <section id="about" className="relative overflow-hidden py-24 scroll-mt-20 md:py-32">
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 md:px-8 lg:grid-cols-2 lg:gap-20">
         {/* Image with reveal mask */}
         <motion.div
@@ -26,16 +26,16 @@ export function AboutSection() {
           <div className="relative overflow-hidden rounded-xl border border-border">
             <img
               src="/cars/about.png"
-              alt="Không gian showroom và xưởng dịch vụ của gara"
+              alt="Không gian showroom và xưởng dịch vụ của gara APEX MOTORS"
               className="aspect-[4/5] w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
           </div>
-          <div className="glass absolute -bottom-6 -right-4 rounded-xl border border-border px-7 py-5 md:-right-8">
-            <div className="font-sans text-4xl font-bold text-primary">
+          <div className="glass absolute -bottom-5 right-2 rounded-xl border border-border px-5 py-4 sm:-bottom-6 sm:-right-4 sm:px-7 sm:py-5 md:-right-8">
+            <div className="font-sans text-3xl font-bold text-primary sm:text-4xl">
               <Counter to={10} />+
             </div>
-            <div className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+            <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground sm:text-xs">
               Năm kinh nghiệm
             </div>
           </div>
@@ -45,12 +45,12 @@ export function AboutSection() {
         <div>
           <Reveal>
             <span className="flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.35em] text-primary">
-              <span className="h-px w-10 bg-primary" />
+              <span className="h-px w-10 bg-primary" aria-hidden="true" />
               Về Gara Của Chúng Tôi
             </span>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="mt-6 text-balance font-sans text-4xl font-bold uppercase leading-[1.05] tracking-tight text-foreground md:text-6xl">
+            <h2 className="mt-5 text-balance font-sans text-3xl font-bold uppercase leading-[1.05] tracking-tight text-foreground sm:mt-6 sm:text-4xl md:text-6xl">
               Hơn Cả Một Gara.
               <br />
               <span className="text-primary">Đó Là Niềm Đam Mê.</span>
@@ -68,7 +68,7 @@ export function AboutSection() {
               <Reveal key={f} delay={0.3 + i * 0.1} direction="left">
                 <div className="flex items-center gap-4">
                   <span className="grid size-8 shrink-0 place-items-center rounded-full bg-primary/15 text-primary">
-                    <Check className="size-4" />
+                    <Check className="size-4" aria-hidden="true" />
                   </span>
                   <span className="font-mono text-sm text-foreground">{f}</span>
                 </div>

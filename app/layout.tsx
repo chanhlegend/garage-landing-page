@@ -35,8 +35,18 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="vi" className={`dark ${oswald.variable} ${inter.variable}`}>
-      <body className="bg-background font-mono antialiased">
+    <html
+      lang="vi"
+      className={`dark ${oswald.variable} ${inter.variable}`}
+      suppressHydrationWarning
+    >
+      <body className="bg-background font-mono antialiased overflow-x-hidden relative max-w-full">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:font-mono focus:text-sm focus:text-primary-foreground"
+        >
+          Bỏ qua tới nội dung chính
+        </a>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

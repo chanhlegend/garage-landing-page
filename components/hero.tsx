@@ -41,7 +41,7 @@ export function Hero() {
       id="home"
       ref={ref}
       onMouseMove={onMouseMove}
-      className="relative flex min-h-svh items-center overflow-hidden"
+      className="relative flex min-h-svh scroll-mt-20 items-center overflow-hidden"
     >
       {/* Background */}
       <motion.div style={{ x: imgX, y: imgY }} className="absolute inset-0 -z-10 scale-110">
@@ -55,7 +55,7 @@ export function Hero() {
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-background via-transparent to-background/40" />
 
       {/* Dust particles */}
-      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
         {particles.map((p, i) => (
           <span
             key={i}
@@ -74,19 +74,19 @@ export function Hero() {
 
       <motion.div
         style={{ x: contentX }}
-        className="mx-auto flex w-full max-w-7xl flex-col px-5 pt-28 md:px-8"
+        className="mx-auto flex w-full max-w-7xl flex-col px-4 pt-24 sm:px-6 md:px-8 md:pt-28"
       >
         <motion.span
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="mb-6 flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.35em] text-primary"
+          className="mb-4 flex items-center gap-2.5 font-mono text-[11px] font-medium uppercase tracking-[0.25em] text-primary sm:mb-6 sm:gap-3 sm:text-xs sm:tracking-[0.35em]"
         >
-          <span className="h-px w-10 bg-primary" />
+          <span className="h-px w-8 bg-primary sm:w-10" aria-hidden="true" />
           Gara Ô Tô Cao Cấp
         </motion.span>
 
-        <h1 className="font-sans text-6xl font-bold uppercase leading-[0.95] tracking-tight text-foreground sm:text-7xl md:text-8xl lg:text-9xl">
+        <h1 className="font-sans text-4xl font-bold uppercase leading-[0.95] tracking-tight text-foreground xs:text-5xl sm:text-7xl md:text-8xl lg:text-9xl">
           {['Chạm tay', 'Ước mơ.'].map((line, i) => (
             <span key={line} className="block overflow-hidden">
               <motion.span
@@ -105,7 +105,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.6 }}
-          className="mt-7 max-w-md text-pretty font-mono text-base leading-relaxed text-muted-foreground"
+          className="mt-5 max-w-md text-pretty font-mono text-sm leading-relaxed text-muted-foreground sm:mt-7 sm:text-base"
         >
           Khám phá những mẫu xe được tuyển chọn kỹ lưỡng cùng dịch vụ chăm sóc ô tô chuyên nghiệp.
         </motion.p>
@@ -114,18 +114,18 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.95, duration: 0.6 }}
-          className="mt-9 flex flex-wrap items-center gap-4"
+          className="mt-7 flex flex-col gap-3.5 sm:mt-9 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4"
         >
           <a
             href="#vehicles"
-            className="group flex items-center gap-2 rounded-md bg-primary px-7 py-3.5 font-mono text-sm font-semibold uppercase tracking-wide text-primary-foreground transition-all hover:shadow-[0_0_30px_-4px] hover:shadow-primary"
+            className="group flex items-center justify-center gap-2 rounded-md bg-primary px-7 py-3.5 font-mono text-sm font-semibold uppercase tracking-wide text-primary-foreground transition-[colors,box-shadow] hover:shadow-[0_0_30px_-4px] hover:shadow-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
           >
             Xem sản phẩm
-            <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
           </a>
           <a
             href="#contact"
-            className="rounded-md border border-border bg-background/30 px-7 py-3.5 font-mono text-sm font-semibold uppercase tracking-wide text-foreground backdrop-blur transition-colors hover:border-primary hover:text-primary"
+            className="flex items-center justify-center rounded-md border border-border bg-background/30 px-7 py-3.5 font-mono text-sm font-semibold uppercase tracking-wide text-foreground backdrop-blur transition-colors hover:border-primary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
           >
             Liên hệ ngay
           </a>
@@ -136,15 +136,15 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.7 }}
-          className="glass mt-14 grid w-fit grid-cols-3 gap-8 rounded-xl border border-border px-8 py-6"
+          className="glass mt-10 grid w-full grid-cols-3 gap-2.5 rounded-xl border border-border px-4 py-4 sm:mt-14 sm:w-fit sm:gap-8 sm:px-8 sm:py-6"
         >
           {stats.map((s) => (
-            <div key={s.label}>
-              <div className="font-sans text-3xl font-bold text-foreground md:text-4xl">
+            <div key={s.label} className="text-center sm:text-left">
+              <div className="font-sans text-2xl font-bold text-foreground sm:text-3xl md:text-4xl">
                 <Counter to={s.value} />
                 <span className="text-primary">{s.suffix}</span>
               </div>
-              <div className="mt-1 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+              <div className="mt-0.5 font-mono text-[10px] uppercase tracking-wider text-muted-foreground sm:mt-1 sm:text-xs sm:tracking-widest">
                 {s.label}
               </div>
             </div>
@@ -158,14 +158,14 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-muted-foreground md:flex"
+        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary md:flex"
       >
         <span className="font-mono text-[10px] uppercase tracking-[0.3em]">Cuộn xuống</span>
         <motion.span
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.6, repeat: Number.POSITIVE_INFINITY }}
         >
-          <ChevronDown className="size-5 text-primary" />
+          <ChevronDown className="size-5 text-primary" aria-hidden="true" />
         </motion.span>
       </motion.a>
     </section>
