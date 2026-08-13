@@ -7,7 +7,7 @@ import { Reveal } from '@/components/reveal'
 
 const info = [
   { icon: MapPin, label: 'Địa chỉ', value: '128 Nguyễn Văn Linh, Q.7, TP.HCM' },
-  { icon: Phone, label: 'Hotline', value: '0909 888 666' },
+  { icon: Phone, label: 'Hotline', value: '0392 923 792' },
   { icon: Mail, label: 'Email', value: 'sales@xechuyendungsaigon.vn' },
   { icon: Clock, label: 'Giờ làm việc', value: '08:00 – 20:00 (T2 – CN)' },
 ]
@@ -67,7 +67,7 @@ export function ContactSection() {
               </p>
               <div className="mt-4 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-3">
                 <a
-                  href="https://zalo.me"
+                  href="https://zalo.me/0392923792"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex flex-1 items-center justify-center gap-2 rounded-md bg-primary px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wide text-primary-foreground transition-[colors,box-shadow] hover:shadow-[0_0_24px_-4px] hover:shadow-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
@@ -85,7 +85,7 @@ export function ContactSection() {
                   Facebook
                 </a>
                 <a
-                  href="tel:0909888666"
+                  href="tel:0392923792"
                   className="flex flex-1 items-center justify-center gap-2 rounded-md border border-border bg-card px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wide text-foreground transition-colors hover:border-primary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                 >
                   <Phone className="size-4" aria-hidden="true" />
@@ -104,7 +104,7 @@ export function ContactSection() {
               <div className="grid gap-5">
                 <Field label="Họ và tên" name="name" autocomplete="name" placeholder="Nguyễn Văn A" />
                 <div className="grid gap-5 sm:grid-cols-2">
-                  <Field label="Số điện thoại" name="phone" type="tel" inputMode="tel" autocomplete="tel" placeholder="0909 …" />
+                  <Field label="Số điện thoại" name="phone" type="tel" inputMode="tel" autocomplete="tel" placeholder="0392 …" />
                   <Field label="Email" name="email" type="email" autocomplete="email" spellCheck={false} placeholder="ban@email.com" />
                 </div>
                 <div>

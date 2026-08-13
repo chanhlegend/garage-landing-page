@@ -10,11 +10,11 @@ const navItems = [
   { label: 'Trang chủ', href: '#home' },
   { label: 'Giới thiệu', href: '#about' },
   { label: 'Sản phẩm', href: '#vehicles' },
-  { label: 'Dịch vụ', href: '#services' },
+  { label: 'Dịch vụ hậu mãi', href: '#services' },
   { label: 'Liên hệ', href: '#contact' },
 ]
 
-const HOTLINE = '0909 888 666'
+const HOTLINE = '0392 923 792'
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false)

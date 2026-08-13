@@ -16,6 +16,7 @@ import {
   Eye,
 } from 'lucide-react'
 import { Reveal } from '@/components/reveal'
+import Link from 'next/link'
 import { categories, vehicles, type Vehicle } from '@/lib/vehicles'
 
 export function FeaturedVehicles() {
@@ -116,7 +117,7 @@ export function FeaturedVehicles() {
         </Reveal>
       </div>
 
-      {/* Vehicles Carousel Container with hardware accelerated transitions */}
+      {/* Vehicles Carousel Container */}
       <motion.div
         layout="position"
         className="relative mt-8 sm:mt-10"
@@ -135,13 +136,12 @@ export function FeaturedVehicles() {
               key={v.id}
               vehicle={v}
               index={i}
-              onSelect={() => setSelectedVehicle(v)}
             />
           ))}
         </motion.div>
       </motion.div>
 
-      {/* Vehicle Details Modal */}
+      {/* Vehicle Details Modal (kept for legacy fallback) */}
       <AnimatePresence>
         {selectedVehicle && (
           <VehicleDetailModal
@@ -157,11 +157,9 @@ export function FeaturedVehicles() {
 function VehicleCard({
   vehicle,
   index,
-  onSelect,
 }: {
   vehicle: Vehicle
   index: number
-  onSelect: () => void
 }) {
   const [currentImgIndex, setCurrentImgIndex] = useState(0)
   const images = vehicle.images && vehicle.images.length > 0 ? vehicle.images : [vehicle.image]
@@ -182,81 +180,79 @@ function VehicleCard({
       }}
       className="group relative w-[290px] shrink-0 snap-start overflow-hidden rounded-xl border border-border bg-card transition-all duration-300 hover:border-primary/60 hover:shadow-lg sm:w-[330px] md:w-[360px]"
     >
-      {/* Image Showcase with 3-image switcher */}
-      <div className="relative aspect-[16/11] overflow-hidden bg-muted">
-        <motion.img
-          key={currentImgIndex}
-          initial={{ opacity: 0.6 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.25 }}
-          src={images[currentImgIndex]}
-          alt={`${vehicle.brand} ${vehicle.model} - Ảnh ${currentImgIndex + 1}`}
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-card via-card/10 to-transparent opacity-80" />
+      <Link href={`/vehicles/${vehicle.id}`} className="block h-full cursor-pointer">
+        {/* Image Showcase with 3-image switcher */}
+        <div className="relative aspect-[16/11] overflow-hidden bg-muted">
+          <motion.img
+            key={currentImgIndex}
+            initial={{ opacity: 0.85 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.2 }}
+            src={images[currentImgIndex]}
+            alt={`${vehicle.brand} ${vehicle.model} - Ảnh ${currentImgIndex + 1}`}
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-card/60 via-transparent to-transparent pointer-events-none" />
 
-        {/* Category badge */}
-        <span className="absolute left-4 top-4 rounded-md bg-background/80 px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-widest text-foreground backdrop-blur">
-          {vehicle.category}
-        </span>
+          {/* Category badge */}
+          <span className="absolute left-4 top-4 rounded-md bg-background/80 px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-widest text-foreground backdrop-blur">
+            {vehicle.category}
+          </span>
 
-        {/* 3 Images Indicator Dots */}
-        {images.length > 1 && (
-          <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full bg-background/65 px-2.5 py-1 backdrop-blur-md">
-            {images.map((_, idx) => (
-              <button
-                key={idx}
-                type="button"
-                onClick={(e) => {
-                  e.stopPropagation()
-                  setCurrentImgIndex(idx)
-                }}
-                aria-label={`Xem ảnh ${idx + 1} của xe ${vehicle.model}`}
-                className={`size-2 rounded-full transition-all duration-300 ${
-                  idx === currentImgIndex
-                    ? 'w-4 bg-primary'
-                    : 'bg-foreground/40 hover:bg-foreground/80'
-                }`}
-              />
-            ))}
-          </div>
-        )}
-      </div>
-
-      {/* Content */}
-      <div className="p-6">
-        <p className="font-mono text-xs uppercase tracking-widest text-primary">{vehicle.brand}</p>
-        <h3 className="mt-1 font-sans text-xl font-bold uppercase tracking-tight text-foreground line-clamp-1">
-          {vehicle.model}
-        </h3>
-
-        {/* Specs grid */}
-        <div className="mt-4 grid grid-cols-3 gap-2 border-y border-border py-3.5">
-          <Spec icon={<Calendar className="size-4" aria-hidden="true" />} value={String(vehicle.year)} />
-          <Spec icon={<Gauge className="size-4" aria-hidden="true" />} value={vehicle.mileage} />
-          <Spec icon={<Fuel className="size-4" aria-hidden="true" />} value={vehicle.fuel} />
+          {/* 3 Images Indicator Dots */}
+          {images.length > 1 && (
+            <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full bg-background/65 px-2.5 py-1 backdrop-blur-md">
+              {images.map((_, idx) => (
+                <button
+                  key={idx}
+                  type="button"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    e.stopPropagation()
+                    setCurrentImgIndex(idx)
+                  }}
+                  aria-label={`Xem ảnh ${idx + 1} của xe ${vehicle.model}`}
+                  className={`size-2 rounded-full transition-all duration-300 ${
+                    idx === currentImgIndex
+                      ? 'w-4 bg-primary'
+                      : 'bg-foreground/40 hover:bg-foreground/80'
+                  }`}
+                />
+              ))}
+            </div>
+          )}
         </div>
 
-        {/* Price & Action */}
-        <div className="mt-5 flex items-end justify-between">
-          <div>
-            <p className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-              Giá tham khảo
-            </p>
-            <p className="font-sans text-xl font-bold text-foreground sm:text-2xl">
-              {vehicle.price}
-            </p>
+        {/* Content */}
+        <div className="p-6">
+          <p className="font-mono text-xs uppercase tracking-widest text-primary">{vehicle.brand}</p>
+          <h3 className="mt-1 font-sans text-xl font-bold uppercase tracking-tight text-foreground line-clamp-1 group-hover:text-primary transition-colors">
+            {vehicle.model}
+          </h3>
+
+          {/* Specs grid */}
+          <div className="mt-4 flex items-center justify-between border-y border-border py-3 font-mono text-xs text-muted-foreground">
+            <span>{vehicle.payload ? `Tải trọng: ${vehicle.payload}` : vehicle.category}</span>
+            <span className="text-primary font-medium">Ô Tô Tín Phát</span>
           </div>
-          <button
-            type="button"
-            onClick={onSelect}
-            className="group/btn flex items-center gap-1.5 rounded-md bg-secondary px-4 py-2.5 font-mono text-xs font-semibold uppercase tracking-wide text-foreground transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-          >
-            Xem xe (3 ảnh)
-            <Eye className="size-3.5 transition-transform group-hover/btn:scale-110" aria-hidden="true" />
-          </button>
+
+          {/* Price & Action */}
+          <div className="mt-5 flex items-end justify-between">
+            <div>
+              <p className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                Giá tham khảo
+              </p>
+              <p className="font-sans text-xl font-bold text-foreground sm:text-2xl">
+                {vehicle.price}
+              </p>
+            </div>
+            <span className="group/btn inline-flex items-center gap-1.5 rounded-md bg-secondary px-4 py-2.5 font-mono text-xs font-semibold uppercase tracking-wide text-foreground transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+              Xem chi tiết
+              <Eye className="size-3.5 transition-transform group-hover/btn:scale-110" aria-hidden="true" />
+            </span>
+          </div>
         </div>
-      </div>
+      </Link>
     </motion.article>
   )
 }

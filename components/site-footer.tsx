@@ -5,13 +5,13 @@ const nav = [
   { label: 'Trang chủ', href: '#home' },
   { label: 'Giới thiệu', href: '#about' },
   { label: 'Sản phẩm xe', href: '#vehicles' },
-  { label: 'Dịch vụ', href: '#services' },
+  { label: 'Dịch vụ hậu mãi', href: '#services' },
   { label: 'Liên hệ', href: '#contact' },
 ]
 
 const socials = [
   { icon: Share2, label: 'Facebook', href: 'https://facebook.com' },
-  { icon: MessageCircle, label: 'Zalo', href: 'https://zalo.me' },
+  { icon: MessageCircle, label: 'Zalo', href: 'https://zalo.me/0392923792' },
   { icon: Music2, label: 'TikTok', href: 'https://tiktok.com' },
 ]
 
@@ -64,7 +64,7 @@ export function SiteFooter() {
               Liên hệ trực tiếp
             </h3>
             <ul className="mt-4 flex flex-col gap-3 font-mono text-sm text-foreground">
-              <li>Hotline: 0909 888 666</li>
+              <li>Hotline: 0392 923 792</li>
               <li className="break-all">Email: sales@xechuyendungsaigon.vn</li>
               <li>Địa chỉ: 128 Nguyễn Văn Linh, Q.7, TP.HCM</li>
             </ul>

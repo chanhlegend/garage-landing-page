@@ -51,26 +51,8 @@ export function Hero() {
           className="animate-ken-burns h-full w-full object-cover"
         />
       </motion.div>
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-background via-background/70 to-background/20" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-background via-transparent to-background/40" />
-
-      {/* Dust particles */}
-      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
-        {particles.map((p, i) => (
-          <span
-            key={i}
-            className="absolute rounded-full bg-primary/40"
-            style={{
-              left: p.left,
-              top: p.top,
-              width: p.size,
-              height: p.size,
-              animation: `float-up ${p.duration} linear infinite`,
-              animationDelay: p.delay,
-            }}
-          />
-        ))}
-      </div>
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-background/90 via-background/40 to-transparent" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
 
       <motion.div
         style={{ x: contentX }}
