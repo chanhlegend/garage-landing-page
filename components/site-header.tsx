@@ -1,17 +1,18 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import { AnimatePresence, motion } from 'motion/react'
 import { Menu, Phone, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Logo } from '@/components/logo'
 
 const navItems = [
-  { label: 'Trang chủ', href: '#home' },
-  { label: 'Giới thiệu', href: '#about' },
-  { label: 'Sản phẩm', href: '#vehicles' },
-  { label: 'Dịch vụ hậu mãi', href: '#services' },
-  { label: 'Liên hệ', href: '#contact' },
+  { label: 'Trang chủ', href: '/#home' },
+  { label: 'Giới thiệu', href: '/#about' },
+  { label: 'Sản phẩm', href: '/#vehicles' },
+  { label: 'Dịch vụ hậu mãi', href: '/#services' },
+  { label: 'Liên hệ', href: '/#contact' },
 ]
 
 const HOTLINE = '0392 923 792'
@@ -47,23 +48,23 @@ export function SiteHeader() {
       )}
     >
       <div className="mx-auto flex h-18 w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6 md:px-8">
-        <a
-          href="#home"
+        <Link
+          href="/#home"
           className="shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg"
         >
           <Logo size="md" />
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-9 lg:flex">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               className="group relative font-mono text-sm font-medium uppercase tracking-wide text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
               {item.label}
               <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-primary transition-[width] duration-300 group-hover:w-full" />
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -75,12 +76,12 @@ export function SiteHeader() {
             <Phone className="size-4 text-primary" aria-hidden="true" />
             {HOTLINE}
           </a>
-          <a
-            href="#contact"
+          <Link
+            href="/#contact"
             className="group hidden items-center gap-2 rounded-md bg-primary px-5 py-2.5 font-mono text-sm font-semibold uppercase tracking-wide text-primary-foreground transition-[colors,box-shadow] hover:shadow-[0_0_24px_-4px] hover:shadow-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary sm:flex"
           >
             Liên hệ ngay
-          </a>
+          </Link>
           <button
             type="button"
             aria-label="Mở menu"
@@ -102,7 +103,9 @@ export function SiteHeader() {
             className="fixed inset-0 z-50 flex flex-col bg-background/95 backdrop-blur-2xl lg:hidden"
           >
             <div className="flex h-18 items-center justify-between px-5 py-4">
-              <Logo size="md" />
+              <Link href="/#home" onClick={() => setOpen(false)}>
+                <Logo size="md" />
+              </Link>
               <button
                 type="button"
                 aria-label="Đóng menu"
@@ -114,17 +117,20 @@ export function SiteHeader() {
             </div>
             <nav className="flex flex-1 flex-col justify-center gap-2 overflow-y-auto px-6 py-6">
               {navItems.map((item, i) => (
-                <motion.a
+                <motion.div
                   key={item.href}
-                  href={item.href}
-                  onClick={() => setOpen(false)}
                   initial={{ opacity: 0, x: -30 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.1 + i * 0.08 }}
-                  className="border-b border-border py-4 font-sans text-3xl font-semibold uppercase tracking-wide text-foreground"
                 >
-                  {item.label}
-                </motion.a>
+                  <Link
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    className="block border-b border-border py-4 font-sans text-3xl font-semibold uppercase tracking-wide text-foreground"
+                  >
+                    {item.label}
+                  </Link>
+                </motion.div>
               ))}
               <motion.a
                 href={`tel:${HOTLINE.replace(/\s/g, '')}`}

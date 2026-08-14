@@ -1,12 +1,13 @@
+import Link from 'next/link'
 import { Share2, MessageCircle, Music2 } from 'lucide-react'
 import { Logo } from '@/components/logo'
 
 const nav = [
-  { label: 'Trang chủ', href: '#home' },
-  { label: 'Giới thiệu', href: '#about' },
-  { label: 'Sản phẩm xe', href: '#vehicles' },
-  { label: 'Dịch vụ hậu mãi', href: '#services' },
-  { label: 'Liên hệ', href: '#contact' },
+  { label: 'Trang chủ', href: '/#home' },
+  { label: 'Giới thiệu', href: '/#about' },
+  { label: 'Sản phẩm xe', href: '/#vehicles' },
+  { label: 'Dịch vụ hậu mãi', href: '/#services' },
+  { label: 'Liên hệ', href: '/#contact' },
 ]
 
 const socials = [
@@ -21,7 +22,9 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-5 pb-24 pt-16 md:px-8 lg:pb-16">
         <div className="grid gap-10 md:grid-cols-3">
           <div className="max-w-sm">
-            <Logo size="lg" />
+            <Link href="/#home">
+              <Logo size="lg" />
+            </Link>
             <p className="mt-4 font-mono text-sm leading-relaxed text-muted-foreground">
               Đơn vị hàng đầu tại Sài Gòn chuyên phân phối, đóng mới và tư vấn các dòng xe chuyên dụng: Xe cẩu, xe chở rác, xe ép rác, xe hút bể phốt.
             </p>
@@ -48,12 +51,12 @@ export function SiteFooter() {
             <ul className="mt-4 flex flex-col gap-3">
               {nav.map((item) => (
                 <li key={item.href}>
-                  <a
+                  <Link
                     href={item.href}
                     className="font-mono text-sm text-foreground transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
