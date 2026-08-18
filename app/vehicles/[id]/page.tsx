@@ -31,7 +31,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params
   const vehicle = getVehicleById(id)
-  if (!vehicle) return { title: 'Không tìm thấy xe — Xe Chuyên Dụng Sài Gòn' }
+  if (!vehicle) return { title: 'Không tìm thấy xe — Xe Chuyên Dùng Sài Gòn' }
 
   return {
     title: `${vehicle.model} (${vehicle.brand}) — Ô TÔ TÍN PHÁT`,
@@ -234,7 +234,13 @@ export default async function VehicleDetailPage({ params }: Props) {
                   <div className="rounded-2xl border border-border bg-card p-6 space-y-3">
                     <h3 className="font-sans text-lg font-bold uppercase text-foreground flex items-center gap-2">
                       <ShieldCheck className="size-5 text-primary" />
-                      Cần cẩu thủy lực SOOSAN
+                      {vehicle.category === 'Xe Cẩu'
+                        ? 'Cần cẩu thủy lực SOOSAN'
+                        : vehicle.category === 'Xe Chở Rác' || vehicle.category === 'Xe Ép Rác'
+                        ? 'Thùng chứa & Thiết bị chuyên dùng'
+                        : vehicle.category === 'Xe Hút Bể Phốt'
+                        ? 'Bồn chứa & Hệ thống hút chân không'
+                        : 'Hệ thống chuyên dùng'}
                     </h3>
                     <p className="font-mono text-xs sm:text-sm leading-relaxed text-muted-foreground">
                       {vehicle.overview.craneInfo}
@@ -302,11 +308,18 @@ export default async function VehicleDetailPage({ params }: Props) {
                 </div>
               )}
 
-              {/* Table 2: Crane Specs */}
+              {/* Table 2: Specialized Equipment Specs */}
               {vehicle.craneTechSpecs && (
                 <div className="space-y-4">
                   <h3 className="font-sans text-xl font-bold uppercase text-foreground border-l-4 border-primary pl-3">
-                    2. Cần Cẩu Thủy Lực SOOSAN
+                    2.{' '}
+                    {vehicle.category === 'Xe Cẩu'
+                      ? 'Cần Cẩu Thủy Lực SOOSAN'
+                      : vehicle.category === 'Xe Chở Rác' || vehicle.category === 'Xe Ép Rác'
+                      ? 'Thùng Chứa & Cơ Cấu Chuyên Dùng'
+                      : vehicle.category === 'Xe Hút Bể Phốt'
+                      ? 'Bồn Chứa & Hệ Thống Hút Chân Không'
+                      : 'Hệ Thống Thiết Bị Chuyên Dùng'}
                   </h3>
                   <div className="overflow-x-auto rounded-xl border border-border bg-card">
                     <table className="w-full text-left font-mono text-xs">

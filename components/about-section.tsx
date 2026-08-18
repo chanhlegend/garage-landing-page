@@ -26,7 +26,7 @@ export function AboutSection() {
           <div className="relative overflow-hidden rounded-xl border border-border">
             <img
               src="/cars/z7980592847072_3bf985667d9b9f3279110d80cee35113.jpg"
-              alt="Gara ô tô chuyên dụng chất lượng cao"
+              alt="Gara ô tô chuyên dùng chất lượng cao"
               className="aspect-[4/5] w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
@@ -46,7 +46,7 @@ export function AboutSection() {
           <Reveal>
             <span className="flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.35em] text-primary">
               <span className="h-px w-10 bg-primary" aria-hidden="true" />
-              Về Xe Chuyên Dụng Sài Gòn
+              Về Xe Chuyên Dùng Sài Gòn
             </span>
           </Reveal>
           <Reveal delay={0.1}>
@@ -58,7 +58,7 @@ export function AboutSection() {
           </Reveal>
           <Reveal delay={0.2}>
             <p className="mt-6 max-w-lg text-pretty font-mono leading-relaxed text-muted-foreground">
-              Xe Chuyên Dụng Sài Gòn tự hào là đơn vị uy tín hàng đầu trong lĩnh vực nhập khẩu, phân phối và đóng mới các chủng loại xe môi trường, xe cẩu, xe ép rác, xe hút bể phốt chuyên dụng.
+              Xe Chuyên Dùng Sài Gòn tự hào là đơn vị uy tín hàng đầu trong lĩnh vực nhập khẩu, phân phối và đóng mới các chủng loại xe môi trường, xe cẩu, xe ép rác, xe hút bể phốt chuyên dùng.
             </p>
           </Reveal>
 

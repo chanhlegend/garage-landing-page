@@ -39,7 +39,7 @@ export function Logo({
           <span
             className={`font-sans font-extrabold uppercase tracking-tight text-foreground ${titleSize}`}
           >
-            XE CHUYÊN DỤNG
+            XE CHUYÊN DÙNG
           </span>
           <span className="font-mono text-[10px] font-bold uppercase tracking-[0.28em] text-primary sm:text-xs">
             SÀI GÒN

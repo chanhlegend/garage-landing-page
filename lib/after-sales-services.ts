@@ -66,7 +66,7 @@ export const AFTER_SALES_SERVICES: AfterSalesService[] = [
         title: 'Thiết kế, đóng mới và cấp phiếu kiểm định cho:',
         groups: [
           {
-            name: 'Xe cẩu chuyên dụng',
+            name: 'Xe cẩu chuyên dùng',
             items: ['Đáp ứng mọi nhu cầu nâng, hạ hàng hóa.'],
           },
           {
@@ -89,11 +89,11 @@ export const AFTER_SALES_SERVICES: AfterSalesService[] = [
     id: 'nhap-khau-can-cau-soosan',
     title: 'NHẬP KHẨU CẦN CẨU - BẢNG GIÁ CẨU SOOSAN MỚI NHẤT',
     summary: 'Nhãn hiệu: Cần cẩu thủy lực - SOOSAN Hàn Quốc. Nhập khẩu trực tiếp - Phân phối toàn quốc. Chuyên đóng cẩu lắp mới.',
-    image: '/cars/xe-cau/xe-cau-chenglong-12-tan/11.jpg',
+    image: '/cars/Xe%20C%E1%BA%A9u/CHENGLONG%20-%2012%20T%E1%BA%A4N/11.jpg',
     gallery: [
-      '/cars/xe-cau/xe-cau-chenglong-12-tan/11.jpg',
-      '/cars/xe-cau/xe-cau-chenglong-12-tan/120.jpg',
-      '/cars/xe-cau/xe-cau-dongfeng-8-tan/z7952467632922_147e7dd41edd9749f611d3297c6e1a22.jpg',
+      '/cars/Xe%20C%E1%BA%A9u/CHENGLONG%20-%2012%20T%E1%BA%A4N/11.jpg',
+      '/cars/Xe%20C%E1%BA%A9u/CHENGLONG%20-%2012%20T%E1%BA%A4N/120.jpg',
+      '/cars/Xe%20C%E1%BA%A9u/DONG%20FENG%20-%208%20T%E1%BA%A4N/z7952467627606_1b93a28629dc21c1ea47e2bbddd38853.jpg',
     ],
     hotline: '0392 923 792',
     blocks: [
@@ -252,10 +252,10 @@ export const AFTER_SALES_SERVICES: AfterSalesService[] = [
     id: 'sua-chua-thung-xe-ep-rac',
     title: 'SỬA CHỮA - CẢI TẠO - ĐÓNG MỚI THÙNG XE ÉP RÁC',
     summary: 'Chuyên sửa chữa các thùng xe ép rác. Dịch vụ sửa chữa đóng mới. Chuyên nghiệp uy tín.',
-    image: '/cars/xe-ep-rac/xe-ep-rac-isuzu-22-khoi/z7937062646570_8c602a9c6cd3b229420e91bf87c7b5ac.jpg',
+    image: '/cars/Xe%20%C3%89p%20R%C3%A1c/ISUZU%20FVZ%20-%2022%20KH%E1%BB%90I/1787017169567_9176220574947847834_9176220574947847834_b0a347d1281b3ced64baa135165cd82c.jpg',
     gallery: [
-      '/cars/xe-ep-rac/xe-ep-rac-isuzu-22-khoi/z7937062646570_8c602a9c6cd3b229420e91bf87c7b5ac.jpg',
-      '/cars/xe-ep-rac/xe-ep-rac-hino-14-khoi/z7980592767081_5edc0b89ef8fd05a29a9ccd7e5771407.jpg',
+      '/cars/Xe%20%C3%89p%20R%C3%A1c/ISUZU%20FVZ%20-%2022%20KH%E1%BB%90I/1787017169567_9176220574947847834_9176220574947847834_b0a347d1281b3ced64baa135165cd82c.jpg',
+      '/cars/Xe%20%C3%89p%20R%C3%A1c/HINO%20FG%20-%2014%20KH%E1%BB%90I/z7980592817817_29d687f115c3a844aef55e78b0e16a85.jpg',
     ],
     hotline: '0392 923 792',
     blocks: [

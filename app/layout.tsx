@@ -16,9 +16,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Xe Chuyên Dụng Sài Gòn — Xe Cẩu, Xe Ép Rác, Xe Chở Rác, Xe Hút Bể Phốt',
+  title: 'Xe Chuyên Dùng Sài Gòn — Xe Cẩu, Xe Ép Rác, Xe Chở Rác, Xe Hút Bể Phốt',
   description:
-    'Đơn vị chuyên cung cấp, phân phối và đóng mới các loại xe chuyên dụng uy tín hàng đầu Sài Gòn: Xe cẩu, xe chở rác, xe ép rác, xe hút bể phốt chất lượng cao.',
+    'Đơn vị chuyên cung cấp, phân phối và đóng mới các loại xe chuyên dùng uy tín hàng đầu Sài Gòn: Xe cẩu, xe chở rác, xe ép rác, xe hút bể phốt chất lượng cao.',
 }
 
 export const viewport: Viewport = {

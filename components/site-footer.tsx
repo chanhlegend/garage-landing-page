@@ -5,7 +5,7 @@ import { Logo } from '@/components/logo'
 const nav = [
   { label: 'Trang chủ', href: '/#home' },
   { label: 'Giới thiệu', href: '/#about' },
-  { label: 'Sản phẩm xe', href: '/#vehicles' },
+  { label: 'Tất cả xe', href: '/vehicles' },
   { label: 'Dịch vụ hậu mãi', href: '/#services' },
   { label: 'Liên hệ', href: '/#contact' },
 ]
@@ -26,7 +26,7 @@ export function SiteFooter() {
               <Logo size="lg" />
             </Link>
             <p className="mt-4 font-mono text-sm leading-relaxed text-muted-foreground">
-              Đơn vị hàng đầu tại Sài Gòn chuyên phân phối, đóng mới và tư vấn các dòng xe chuyên dụng: Xe cẩu, xe chở rác, xe ép rác, xe hút bể phốt.
+              Đơn vị hàng đầu tại Sài Gòn chuyên phân phối, đóng mới và tư vấn các dòng xe chuyên dùng: Xe cẩu, xe chở rác, xe ép rác, xe hút bể phốt.
             </p>
             <div className="mt-6 flex gap-3">
               {socials.map((s) => (
@@ -76,7 +76,7 @@ export function SiteFooter() {
 
         <div className="mt-14 border-t border-border pt-6">
           <p className="font-mono text-xs text-muted-foreground">
-            © 2026 XE CHUYÊN DỤNG SÀI GÒN. Bảo lưu mọi quyền.
+            © 2026 XE CHUYÊN DÙNG SÀI GÒN. Bảo lưu mọi quyền.
           </p>
         </div>
       </div>

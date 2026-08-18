@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { AnimatePresence, motion } from 'motion/react'
 import { Menu, Phone, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -10,7 +11,7 @@ import { Logo } from '@/components/logo'
 const navItems = [
   { label: 'Trang chủ', href: '/#home' },
   { label: 'Giới thiệu', href: '/#about' },
-  { label: 'Sản phẩm', href: '/#vehicles' },
+  { label: 'Tất cả xe', href: '/vehicles' },
   { label: 'Dịch vụ hậu mãi', href: '/#services' },
   { label: 'Liên hệ', href: '/#contact' },
 ]
@@ -18,8 +19,33 @@ const navItems = [
 const HOTLINE = '0392 923 792'
 
 export function SiteHeader() {
+  const pathname = usePathname()
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href === '/vehicles') {
+      if (pathname === '/vehicles') {
+        e.preventDefault()
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      } else {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+      }
+    } else if (href.startsWith('/#')) {
+      const hash = href.replace('/', '')
+      if (pathname === '/') {
+        e.preventDefault()
+        if (hash === '#home') {
+          window.scrollTo({ top: 0, behavior: 'smooth' })
+        } else {
+          const el = document.querySelector(hash)
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth' })
+          }
+        }
+      }
+    }
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -50,6 +76,7 @@ export function SiteHeader() {
       <div className="mx-auto flex h-18 w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6 md:px-8">
         <Link
           href="/#home"
+          onClick={(e) => handleNavClick(e, '/#home')}
           className="shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg"
         >
           <Logo size="md" />
@@ -60,6 +87,8 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
+              scroll={true}
+              onClick={(e) => handleNavClick(e, item.href)}
               className="group relative font-mono text-sm font-medium uppercase tracking-wide text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
               {item.label}
@@ -125,7 +154,11 @@ export function SiteHeader() {
                 >
                   <Link
                     href={item.href}
-                    onClick={() => setOpen(false)}
+                    scroll={true}
+                    onClick={(e) => {
+                      setOpen(false)
+                      handleNavClick(e, item.href)
+                    }}
                     className="block border-b border-border py-4 font-sans text-3xl font-semibold uppercase tracking-wide text-foreground"
                   >
                     {item.label}

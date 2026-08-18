@@ -54,7 +54,7 @@ export function FeaturedVehicles() {
             <Reveal>
               <span className="flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.35em] text-primary">
                 <span className="h-px w-10 bg-primary" aria-hidden="true" />
-                Danh Mục Xe Chuyên Dụng
+                Danh Mục Xe Chuyên Dùng
               </span>
             </Reveal>
             <Reveal delay={0.1}>
@@ -140,6 +140,17 @@ export function FeaturedVehicles() {
           ))}
         </motion.div>
       </motion.div>
+
+      {/* CTA to Full Catalog */}
+      <div className="mx-auto mt-8 max-w-7xl px-5 md:px-8 text-center sm:text-right">
+        <Link
+          href="/vehicles"
+          className="group inline-flex items-center gap-3 rounded-xl border border-primary/40 bg-card/80 px-6 py-3.5 font-mono text-xs sm:text-sm font-semibold uppercase tracking-wider text-foreground backdrop-blur transition-all hover:border-primary hover:bg-primary hover:text-primary-foreground hover:shadow-lg hover:shadow-primary/20"
+        >
+          <span>Xem tất cả xe chuyên dùng</span>
+          <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+        </Link>
+      </div>
 
       {/* Vehicle Details Modal (kept for legacy fallback) */}
       <AnimatePresence>
