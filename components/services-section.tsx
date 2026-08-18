@@ -233,7 +233,7 @@ function ServiceDetailModal({
           </div>
           <div className="flex gap-3">
             <a
-              href="https://zalo.me/0392923792"
+              href={`https://zalo.me/${service.hotline.replace(/\s/g, '')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-1 items-center justify-center gap-2 rounded-md bg-primary px-5 py-2.5 font-mono text-xs font-semibold uppercase tracking-wide text-primary-foreground transition-all hover:shadow-[0_0_20px_-3px] hover:shadow-primary sm:flex-initial"

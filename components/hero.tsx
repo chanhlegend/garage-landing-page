@@ -65,7 +65,7 @@ export function Hero() {
           className="mb-4 flex items-center gap-2.5 font-mono text-[11px] font-medium uppercase tracking-[0.25em] text-primary sm:mb-6 sm:gap-3 sm:text-xs sm:tracking-[0.35em]"
         >
           <span className="h-px w-8 bg-primary sm:w-10" aria-hidden="true" />
-          Xe Chuyên Dùng Sài Gòn
+          Xe Chuyên Dùng Tín Phát
         </motion.span>
 
         <h1 className="font-sans text-4xl font-bold uppercase leading-[1.18] tracking-normal text-foreground xs:text-5xl sm:text-7xl md:text-8xl lg:text-9xl">
@@ -89,7 +89,7 @@ export function Hero() {
           transition={{ delay: 0.8, duration: 0.6 }}
           className="mt-5 max-w-md text-pretty font-mono text-sm leading-relaxed text-muted-foreground sm:mt-7 sm:text-base"
         >
-          Khám phá giải pháp xe cẩu, xe chở rác, xe ép rác, xe hút bể phốt chất lượng cao cùng dịch vụ bảo hành, đóng mới chuyên nghiệp tại Sài Gòn.
+          Khám phá giải pháp xe cẩu, xe chở rác, xe ép rác, xe hút bể phốt chất lượng cao cùng dịch vụ bảo hành, đóng mới chuyên nghiệp tại Ô Tô Tín Phát.
         </motion.p>
 
         <motion.div

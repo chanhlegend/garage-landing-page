@@ -392,7 +392,7 @@ function VehicleCatalogInner() {
               Xem tất cả xe
             </button>
             <a
-              href="tel:0392923792"
+              href="tel:0372736227"
               className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 font-mono text-xs font-semibold uppercase tracking-wider text-foreground hover:border-primary hover:text-primary transition-colors"
             >
               <Phone className="size-4 text-primary" />
@@ -482,14 +482,14 @@ function VehicleCatalogInner() {
           </div>
           <div className="md:col-span-4 flex flex-col sm:flex-row md:flex-col gap-3 justify-center">
             <a
-              href="tel:0392923792"
+              href="tel:0372736227"
               className="flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-4 font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-primary-foreground shadow-lg hover:shadow-primary/30 transition-all"
             >
               <Phone className="size-4" />
-              Gọi Hotline: 0392 923 792
+              Gọi Hotline: 0372 736 227
             </a>
             <a
-              href="https://zalo.me/0392923792"
+              href="https://zalo.me/0372736227"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 rounded-xl border border-border bg-background/80 px-6 py-3.5 font-mono text-xs sm:text-sm font-semibold uppercase tracking-wider text-foreground hover:border-primary hover:text-primary transition-colors"
@@ -587,7 +587,7 @@ function CatalogVehicleCard({
                 <ArrowRight className="size-3.5" />
               </Link>
               <a
-                href="tel:0392923792"
+                href="tel:0372736227"
                 className="flex w-full items-center justify-center gap-1.5 rounded-lg border border-border bg-background px-4 py-2 font-mono text-xs font-semibold uppercase tracking-wider text-foreground hover:border-primary hover:text-primary transition-colors"
               >
                 <Phone className="size-3.5 text-primary" />

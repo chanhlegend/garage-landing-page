@@ -12,7 +12,7 @@ const nav = [
 
 const socials = [
   { icon: Share2, label: 'Facebook', href: 'https://facebook.com' },
-  { icon: MessageCircle, label: 'Zalo', href: 'https://zalo.me/0392923792' },
+  { icon: MessageCircle, label: 'Zalo', href: 'https://zalo.me/0372736227' },
   { icon: Music2, label: 'TikTok', href: 'https://tiktok.com' },
 ]
 
@@ -26,7 +26,7 @@ export function SiteFooter() {
               <Logo size="lg" />
             </Link>
             <p className="mt-4 font-mono text-sm leading-relaxed text-muted-foreground">
-              Đơn vị hàng đầu tại Sài Gòn chuyên phân phối, đóng mới và tư vấn các dòng xe chuyên dùng: Xe cẩu, xe chở rác, xe ép rác, xe hút bể phốt.
+              Đơn vị hàng đầu chuyên phân phối, đóng mới và tư vấn các dòng xe chuyên dùng: Xe cẩu, xe chở rác, xe ép rác, xe hút bể phốt — Ô Tô Tín Phát.
             </p>
             <div className="mt-6 flex gap-3">
               {socials.map((s) => (
@@ -64,19 +64,21 @@ export function SiteFooter() {
 
           <div>
             <h3 className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
-              Liên hệ trực tiếp
+              Thông tin liên hệ
             </h3>
-            <ul className="mt-4 flex flex-col gap-3 font-mono text-sm text-foreground">
-              <li>Hotline: 0392 923 792</li>
-              <li className="break-all">Email: sales@xechuyendungsaigon.vn</li>
-              <li>Địa chỉ: 128 Nguyễn Văn Linh, Q.7, TP.HCM</li>
+            <ul className="mt-4 flex flex-col gap-2.5 font-mono text-xs text-foreground">
+              <li><strong className="text-primary">Hotline:</strong> 0372 736 227</li>
+              <li><strong className="text-primary">Email:</strong> hongnhung.xechuyendungtinphat@gmail.com</li>
+              <li><strong className="text-primary">Văn phòng:</strong> 45 đường số 1, KP.11, P. Long Trường, TP. Hồ Chí Minh</li>
+              <li><strong className="text-primary">Showroom:</strong> 915, Quốc Lộ 1A, P.An Phú Đông, TP. Hồ Chí Minh</li>
+              <li><strong className="text-primary">Nhà máy SX:</strong> 232 ĐT743A, P. Đông Hòa, TP. Hồ Chí Minh</li>
             </ul>
           </div>
         </div>
 
         <div className="mt-14 border-t border-border pt-6">
           <p className="font-mono text-xs text-muted-foreground">
-            © 2026 XE CHUYÊN DÙNG SÀI GÒN. Bảo lưu mọi quyền.
+            © 2026 XE CHUYÊN DÙNG TÍN PHÁT. Bảo lưu mọi quyền.
           </p>
         </div>
       </div>

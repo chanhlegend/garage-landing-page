@@ -28,7 +28,7 @@ export const AFTER_SALES_SERVICES: AfterSalesService[] = [
       '/cars/z7958350577287_0f3a2ae7c592dd343f9be45d9f2b96a1.jpg',
       '/cars/z7980592847072_3bf985667d9b9f3279110d80cee35113.jpg',
     ],
-    hotline: '0392 923 792',
+    hotline: '0372 736 227',
     blocks: [
       {
         type: 'paragraph',
@@ -46,7 +46,7 @@ export const AFTER_SALES_SERVICES: AfterSalesService[] = [
         },
         body: {
           time: '12 tháng (không giới hạn số giờ hay số km sử dụng).',
-          location: 'Xưởng sản xuất Công ty TNHH TM DV Ô Tô Tín Phát (Địa chỉ: 232 ĐT743A, Khu Phố Bình Thung 1, Phường Bình An, Dĩ An, Bình Dương).',
+          location: 'Xưởng sản xuất Công ty TNHH TM DV Ô Tô Tín Phát (Địa chỉ: 232 ĐT743A, P. Đông Hòa, TP. Hồ Chí Minh).',
         },
       },
       {
@@ -95,7 +95,7 @@ export const AFTER_SALES_SERVICES: AfterSalesService[] = [
       '/cars/Xe%20C%E1%BA%A9u/CHENGLONG%20-%2012%20T%E1%BA%A4N/120.jpg',
       '/cars/Xe%20C%E1%BA%A9u/DONG%20FENG%20-%208%20T%E1%BA%A4N/z7952467627606_1b93a28629dc21c1ea47e2bbddd38853.jpg',
     ],
-    hotline: '0392 923 792',
+    hotline: '0372 736 227',
     blocks: [
       {
         type: 'key_value',
@@ -103,7 +103,7 @@ export const AFTER_SALES_SERVICES: AfterSalesService[] = [
           { label: 'Nhãn hiệu', value: 'Cần cẩu thủy lực - SOOSAN Hàn Quốc' },
           { label: 'Phân phối', value: 'Nhập khẩu trực tiếp - Phân phối toàn quốc' },
           { label: 'Dịch vụ', value: 'Chuyên đóng cẩu lắp mới' },
-          { label: 'Đơn vị cung cấp', value: 'Ô TÔ TÍN PHÁT (Hotline: 0392 923 792)' },
+          { label: 'Đơn vị cung cấp', value: 'Ô TÔ TÍN PHÁT (Hotline: 0372 736 227)' },
         ],
       },
       {
@@ -138,7 +138,7 @@ export const AFTER_SALES_SERVICES: AfterSalesService[] = [
       '/cars/rftn.jpg',
       '/cars/dz.jpg',
     ],
-    hotline: '0392 923 792',
+    hotline: '0372 736 227',
     blocks: [
       {
         type: 'paragraph',
@@ -208,7 +208,7 @@ export const AFTER_SALES_SERVICES: AfterSalesService[] = [
         type: 'contact_callout',
         title: 'Sửa chữa xe chuyên dùng, xe tải chất lượng nhất ở đâu?',
         text: 'Bạn đang tìm kiếm dịch vụ sửa chữa, cải tạo, đóng mới xe chuyên dùng chất lượng? Công ty TNHH TM DV Ô Tô Tín Phát tự hào là địa chỉ uy tín hơn 10 năm kinh nghiệm, đáp ứng nhanh chóng và đảm bảo chất lượng tối ưu. Chuyên sửa chữa, đóng mới xe cẩu, xe ép rác, xe chở xe, xe tải thùng mui bạt, thùng kín... Đội ngũ kỹ sư tay nghề cao, trang thiết bị hiện đại, cam kết đúng tiến độ, chi phí hợp lý.',
-        hotline: '0392 923 792',
+        hotline: '0372 736 227',
       },
       {
         type: 'heading',
@@ -222,7 +222,7 @@ export const AFTER_SALES_SERVICES: AfterSalesService[] = [
         },
         body: {
           time: 'Bảo hành 01 năm không hạn chế giờ và số km sử dụng.',
-          location: 'Công ty TNHH TM DV Ô Tô Tín Phát (Địa chỉ: 232 ĐT743A, Khu Phố Bình Thung 1, Phường Bình An, Dĩ An, Bình Dương).',
+          location: 'Công ty TNHH TM DV Ô Tô Tín Phát (Địa chỉ: 232 ĐT743A, P. Đông Hòa, TP. Hồ Chí Minh).',
         },
       },
       {
@@ -257,7 +257,7 @@ export const AFTER_SALES_SERVICES: AfterSalesService[] = [
       '/cars/Xe%20%C3%89p%20R%C3%A1c/ISUZU%20FVZ%20-%2022%20KH%E1%BB%90I/1787017169567_9176220574947847834_9176220574947847834_b0a347d1281b3ced64baa135165cd82c.jpg',
       '/cars/Xe%20%C3%89p%20R%C3%A1c/HINO%20FG%20-%2014%20KH%E1%BB%90I/z7980592817817_29d687f115c3a844aef55e78b0e16a85.jpg',
     ],
-    hotline: '0392 923 792',
+    hotline: '0372 736 227',
     blocks: [
       {
         type: 'bullet_list',
@@ -265,7 +265,7 @@ export const AFTER_SALES_SERVICES: AfterSalesService[] = [
           'Chuyên sửa chữa các thùng xe ép rác',
           'Dịch vụ sửa chữa đóng mới',
           'Chuyên nghiệp uy tín',
-          'Ô TÔ TÍN PHÁT: 0392 923 792',
+          'Ô TÔ TÍN PHÁT: 0372 736 227',
         ],
       },
       {
@@ -310,7 +310,7 @@ export const AFTER_SALES_SERVICES: AfterSalesService[] = [
         type: 'contact_callout',
         title: 'Sửa chữa xe chuyên dùng, xe tải chất lượng nhất ở đâu?',
         text: 'Công ty Ô TÔ TÍN PHÁT chúng tôi chuyên Sửa chữa - Cải tạo - Đóng mới các loại xe chuyên dùng và xe tải thùng trên toàn Quốc. Dịch vụ của chúng tôi sẽ đáp ứng phục vụ khách hàng đầy đủ, chất lượng và thời gian nhanh nhất.',
-        hotline: '0392 923 792',
+        hotline: '0372 736 227',
       },
       {
         type: 'heading',
@@ -324,7 +324,7 @@ export const AFTER_SALES_SERVICES: AfterSalesService[] = [
         },
         body: {
           time: 'Bảo hành 01 năm không hạn chế giờ và số km sử dụng.',
-          location: 'Xưởng sản xuất: Công ty TNHH TM DV Ô Tô Tín Phát, 232 ĐT743A, Khu Phố Bình Thung 1, Phường Bình An, Dĩ An, Bình Dương.',
+          location: 'Xưởng sản xuất: Công ty TNHH TM DV Ô Tô Tín Phát, 232 ĐT743A, P. Đông Hòa, TP. Hồ Chí Minh.',
         },
       },
       {
@@ -358,7 +358,7 @@ export const AFTER_SALES_SERVICES: AfterSalesService[] = [
       '/cars/120.jpg',
       '/cars/96.jpg',
     ],
-    hotline: '0392 923 792',
+    hotline: '0372 736 227',
     blocks: [
       {
         type: 'paragraph',

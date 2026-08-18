@@ -41,8 +41,8 @@ export function Logo({
           >
             XE CHUYÊN DÙNG
           </span>
-          <span className="font-mono text-[10px] font-bold uppercase tracking-[0.28em] text-primary sm:text-xs">
-            SÀI GÒN
+          <span className="font-sans text-[11px] font-bold uppercase tracking-normal text-primary sm:text-xs">
+            TÍN PHÁT
           </span>
         </div>
       )}

@@ -7,7 +7,7 @@ import { VehicleCatalog } from '@/components/vehicle-catalog'
 import { ShieldCheck, Truck, Award, Clock } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Danh Sách Xe Chuyên Dùng — Ô TÔ TÍN PHÁT SÀI GÒN',
+  title: 'Danh Sách Xe Chuyên Dùng — XE CHUYÊN DÙNG TÍN PHÁT',
   description:
     'Tổng hợp đầy đủ các dòng xe chuyên dùng chính hãng: Xe cẩu, xe chở rác, xe ép rác, xe hút bể phốt từ các thương hiệu hàng đầu Hyundai, Hino, Isuzu, Chenglong, Dongfeng, Thaco.',
 }

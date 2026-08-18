@@ -16,7 +16,7 @@ const navItems = [
   { label: 'Liên hệ', href: '/#contact' },
 ]
 
-const HOTLINE = '0392 923 792'
+const HOTLINE = '0372 736 227'
 
 export function SiteHeader() {
   const pathname = usePathname()

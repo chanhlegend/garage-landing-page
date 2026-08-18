@@ -6,9 +6,11 @@ import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Share2 } from 'lucide-
 import { Reveal } from '@/components/reveal'
 
 const info = [
-  { icon: MapPin, label: 'Địa chỉ', value: '128 Nguyễn Văn Linh, Q.7, TP.HCM' },
-  { icon: Phone, label: 'Hotline', value: '0392 923 792' },
-  { icon: Mail, label: 'Email', value: 'sales@xechuyendungsaigon.vn' },
+  { icon: MapPin, label: 'Địa chỉ Văn phòng', value: '45 đường số 1, KP.11, P. Long Trường, TP. Hồ Chí Minh' },
+  { icon: MapPin, label: 'Địa chỉ Showroom', value: '915, Quốc Lộ 1A, P.An Phú Đông, TP. Hồ Chí Minh' },
+  { icon: MapPin, label: 'Xưởng sản xuất, Nhà máy', value: '232 ĐT743A, P. Đông Hòa, TP. Hồ Chí Minh' },
+  { icon: Phone, label: 'Hotline', value: '0372 736 227' },
+  { icon: Mail, label: 'Email', value: 'hongnhung.xechuyendungtinphat@gmail.com' },
   { icon: Clock, label: 'Giờ làm việc', value: '08:00 – 20:00 (T2 – CN)' },
 ]
 
@@ -43,16 +45,16 @@ export function ContactSection() {
           <div>
             <div className="grid gap-3.5 grid-cols-1">
               {info.map((item, i) => (
-                <Reveal key={item.label} delay={i * 0.08} direction="left">
-                  <div className="flex h-full items-center gap-4 rounded-xl border border-border bg-card p-4 sm:px-5 sm:py-4">
-                    <span className="grid size-10 shrink-0 place-items-center rounded-md bg-primary/15 text-primary">
-                      <item.icon className="size-5" aria-hidden="true" />
+                <Reveal key={item.label} delay={i * 0.06} direction="left">
+                  <div className="flex h-full items-start gap-4 rounded-xl border border-border bg-card p-3.5 sm:px-4 sm:py-3.5">
+                    <span className="grid size-9 shrink-0 place-items-center rounded-md bg-primary/15 text-primary mt-0.5">
+                      <item.icon className="size-4" aria-hidden="true" />
                     </span>
-                    <div className="flex-1">
+                    <div className="flex-1 min-w-0">
                       <p className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
                         {item.label}
                       </p>
-                      <p className="mt-0.5 font-mono text-xs sm:text-sm font-semibold text-foreground whitespace-nowrap">
+                      <p className="mt-0.5 font-mono text-xs sm:text-sm font-semibold text-foreground break-words">
                         {item.value}
                       </p>
                     </div>
@@ -67,7 +69,7 @@ export function ContactSection() {
               </p>
               <div className="mt-4 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-3">
                 <a
-                  href="https://zalo.me/0392923792"
+                  href="https://zalo.me/0372736227"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex flex-1 items-center justify-center gap-2 rounded-md bg-primary px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wide text-primary-foreground transition-[colors,box-shadow] hover:shadow-[0_0_24px_-4px] hover:shadow-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
@@ -85,7 +87,7 @@ export function ContactSection() {
                   Facebook
                 </a>
                 <a
-                  href="tel:0392923792"
+                  href="tel:0372736227"
                   className="flex flex-1 items-center justify-center gap-2 rounded-md border border-border bg-card px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wide text-foreground transition-colors hover:border-primary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                 >
                   <Phone className="size-4" aria-hidden="true" />
@@ -104,7 +106,7 @@ export function ContactSection() {
               <div className="grid gap-5">
                 <Field label="Họ và tên" name="name" autocomplete="name" placeholder="Nguyễn Văn A" />
                 <div className="grid gap-5 sm:grid-cols-2">
-                  <Field label="Số điện thoại" name="phone" type="tel" inputMode="tel" autocomplete="tel" placeholder="0392 …" />
+                  <Field label="Số điện thoại" name="phone" type="tel" inputMode="tel" autocomplete="tel" placeholder="0372 …" />
                   <Field label="Email" name="email" type="email" autocomplete="email" spellCheck={false} placeholder="ban@email.com" />
                 </div>
                 <div>

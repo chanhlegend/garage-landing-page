@@ -46,19 +46,19 @@ export function AboutSection() {
           <Reveal>
             <span className="flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.35em] text-primary">
               <span className="h-px w-10 bg-primary" aria-hidden="true" />
-              Về Xe Chuyên Dùng Sài Gòn
+              Về Xe Chuyên Dùng Tín Phát
             </span>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-6 pt-1 text-balance font-sans text-3xl font-bold uppercase leading-[1.25] tracking-normal text-foreground sm:mt-7 sm:text-4xl md:text-6xl">
               Chất Lượng Vượt Trội.
               <br />
-              <span className="text-primary">Uy Tín Hàng Đầu Sài Gòn.</span>
+              <span className="text-primary">Uy Tín Hàng Đầu Tín Phát.</span>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
             <p className="mt-6 max-w-lg text-pretty font-mono leading-relaxed text-muted-foreground">
-              Xe Chuyên Dùng Sài Gòn tự hào là đơn vị uy tín hàng đầu trong lĩnh vực nhập khẩu, phân phối và đóng mới các chủng loại xe môi trường, xe cẩu, xe ép rác, xe hút bể phốt chuyên dùng.
+              Xe Chuyên Dùng Tín Phát tự hào là đơn vị uy tín hàng đầu trong lĩnh vực nhập khẩu, phân phối và đóng mới các chủng loại xe môi trường, xe cẩu, xe ép rác, xe hút bể phốt chuyên dùng.
             </p>
           </Reveal>
 

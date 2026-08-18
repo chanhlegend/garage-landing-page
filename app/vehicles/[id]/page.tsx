@@ -31,7 +31,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params
   const vehicle = getVehicleById(id)
-  if (!vehicle) return { title: 'Không tìm thấy xe — Xe Chuyên Dùng Sài Gòn' }
+  if (!vehicle) return { title: 'Không tìm thấy xe — Xe Chuyên Dùng Tín Phát' }
 
   return {
     title: `${vehicle.model} (${vehicle.brand}) — Ô TÔ TÍN PHÁT`,
@@ -158,14 +158,14 @@ export default async function VehicleDetailPage({ params }: Props) {
               {/* Action Buttons */}
               <div className="space-y-3 pt-2">
                 <a
-                  href="tel:0392923792"
+                  href="tel:0372736227"
                   className="flex w-full items-center justify-center gap-2 rounded-md bg-primary px-6 py-4 font-mono text-sm font-semibold uppercase tracking-wide text-primary-foreground transition-all hover:shadow-[0_0_25px_-3px] hover:shadow-primary"
                 >
                   <Phone className="size-5" />
-                  Hotline hỗ trợ: 0392 923 792
+                  Hotline hỗ trợ: 0372 736 227
                 </a>
                 <a
-                  href="https://zalo.me/0392923792"
+                  href="https://zalo.me/0372736227"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex w-full items-center justify-center gap-2 rounded-md border border-border bg-card px-6 py-3.5 font-mono text-sm font-semibold uppercase tracking-wide text-foreground transition-colors hover:border-primary hover:text-primary"

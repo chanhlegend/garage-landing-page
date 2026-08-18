@@ -26,14 +26,14 @@ export function MobileActionBar() {
           className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-3 border-t border-border bg-background/90 backdrop-blur-xl lg:hidden"
         >
           <a
-            href="tel:0392923792"
+            href="tel:0372736227"
             className="flex flex-col items-center gap-1 py-3 font-mono text-[11px] font-semibold uppercase tracking-wide text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
           >
             <Phone className="size-5 text-primary" aria-hidden="true" />
             Gọi ngay
           </a>
           <a
-            href="https://zalo.me/0392923792"
+            href="https://zalo.me/0372736227"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center gap-1 border-x border-border bg-primary py-3 font-mono text-[11px] font-semibold uppercase tracking-wide text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
@@ -42,7 +42,7 @@ export function MobileActionBar() {
             Zalo
           </a>
           <Link
-            href="/#vehicles"
+            href="/vehicles"
             className="flex flex-col items-center gap-1 py-3 font-mono text-[11px] font-semibold uppercase tracking-wide text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
           >
             <Car className="size-5 text-primary" aria-hidden="true" />
