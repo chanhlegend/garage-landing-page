@@ -12,7 +12,7 @@ const nav = [
 
 const socials = [
   { icon: Share2, label: 'Facebook', href: 'https://facebook.com' },
-  { icon: MessageCircle, label: 'Zalo', href: 'https://zalo.me/0372736227' },
+  { icon: MessageCircle, label: 'Zalo', href: 'https://zalo.me/0392923792' },
   { icon: Music2, label: 'TikTok', href: 'https://tiktok.com' },
 ]
 
@@ -67,7 +67,7 @@ export function SiteFooter() {
               Thông tin liên hệ
             </h3>
             <ul className="mt-4 flex flex-col gap-2.5 font-mono text-xs text-foreground">
-              <li><strong className="text-primary">Hotline:</strong> 0372 736 227</li>
+              <li><strong className="text-primary">Hotline:</strong> 0392 923 792</li>
               <li><strong className="text-primary">Email:</strong> hongnhung.xechuyendungtinphat@gmail.com</li>
               <li><strong className="text-primary">Văn phòng:</strong> 45 đường số 1, KP.11, P. Long Trường, TP. Hồ Chí Minh</li>
               <li><strong className="text-primary">Showroom:</strong> 915, Quốc Lộ 1A, P.An Phú Đông, TP. Hồ Chí Minh</li>
