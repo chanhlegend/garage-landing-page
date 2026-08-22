@@ -70,9 +70,9 @@ export function Hero() {
               </span>
             </motion.div>
 
-            <h1 className="font-sans text-4xl font-bold uppercase leading-[1.12] tracking-normal text-foreground xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
+            <h1 className="font-sans text-4xl font-bold uppercase leading-[1.22] tracking-wide text-foreground xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl flex flex-col gap-1 sm:gap-2">
               {['Xe Chuyên Dùng', 'Hàng Đầu.'].map((line, i) => (
-                <span key={line} className="block overflow-hidden py-0.5">
+                <span key={line} className="block overflow-hidden py-1 sm:py-1.5">
                   <motion.span
                     className="block"
                     initial={{ y: '110%' }}
@@ -159,7 +159,7 @@ export function Hero() {
                       Mẫu Xe Chủ Lực
                     </span>
                     <span className="block font-sans text-sm font-bold uppercase text-foreground">
-                      Dòng Cẩu & Môi Trường
+                      XE ÉP RÁC 9 KHỐI ISUZU FRR650
                     </span>
                   </div>
                 </div>
@@ -172,8 +172,8 @@ export function Hero() {
               {/* Showcase Image with Badge */}
               <div className="group relative aspect-[16/11] overflow-hidden rounded-2xl bg-muted border border-border">
                 <img
-                  src="/cars/120.jpg"
-                  alt="Xe cẩu chuyên dùng Tín Phát"
+                  src="/cars/Xe%20%C3%89p%20R%C3%A1c/ISUZU%20FRR%20-%209%20KH%E1%BB%90I/isuzu_frr_9m3_main.jpg"
+                  alt="Xe ép rác 9 khối Isuzu FRR650 (FRR90NE4/E5) Tín Phát"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-108"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent pointer-events-none" />
@@ -182,14 +182,14 @@ export function Hero() {
                 <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between rounded-xl bg-card/90 px-3.5 py-2 backdrop-blur-md border border-border/80">
                   <div>
                     <p className="font-mono text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
-                      Hãng xe cơ sở:
+                      Dòng xe cơ sở:
                     </p>
                     <p className="font-sans text-xs font-bold uppercase text-foreground">
-                      HINO • ISUZU • HYUNDAI
+                      ISUZU FORWARD FRR650
                     </p>
                   </div>
                   <span className="rounded-lg bg-primary px-2.5 py-1 font-mono text-[10px] font-bold uppercase text-primary-foreground">
-                    Cẩu Soosan
+                    Euro 5 • 9 Khối
                   </span>
                 </div>
               </div>
@@ -197,12 +197,12 @@ export function Hero() {
               {/* Specs Matrix */}
               <div className="grid grid-cols-3 gap-2 rounded-xl bg-secondary/60 p-3 text-center font-mono text-xs">
                 <div className="space-y-0.5 border-r border-border/60">
-                  <span className="text-[10px] text-muted-foreground">Tải trọng</span>
-                  <p className="font-bold text-foreground">5 - 15 Tấn</p>
+                  <span className="text-[10px] text-muted-foreground">Dung tích thùng</span>
+                  <p className="font-bold text-foreground">9 m³ (Khối)</p>
                 </div>
                 <div className="space-y-0.5 border-r border-border/60">
-                  <span className="text-[10px] text-muted-foreground">Cần cẩu</span>
-                  <p className="font-bold text-accent">Soosan Korea</p>
+                  <span className="text-[10px] text-muted-foreground">Động cơ</span>
+                  <p className="font-bold text-accent">Isuzu 204 PS</p>
                 </div>
                 <div className="space-y-0.5">
                   <span className="text-[10px] text-muted-foreground">Hỗ trợ vay</span>
@@ -214,20 +214,20 @@ export function Hero() {
               <div className="space-y-2 pt-1">
                 <div className="flex items-center gap-2 text-xs font-mono text-foreground/90">
                   <CheckCircle2 className="size-4 text-accent shrink-0" />
-                  <span>Hồ sơ bản vẽ Đăng Kiểm trọn gói 100%</span>
+                  <span>Thùng Inox biên dạng cong chống rỉ sét & axit rác</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs font-mono text-foreground/90">
                   <CheckCircle2 className="size-4 text-accent shrink-0" />
-                  <span>Xưởng sản xuất 5000m² gia công trực tiếp không qua trung gian</span>
+                  <span>Cơ cấu máng xúc nạp nhanh, hệ thống thủy lực Châu Âu</span>
                 </div>
               </div>
 
               {/* Card Action */}
               <Link
-                href="/vehicles"
+                href="/vehicles/v-17"
                 className="group flex w-full items-center justify-center gap-2 rounded-xl bg-secondary py-3.5 font-mono text-xs font-bold uppercase tracking-wider text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
               >
-                <span>Xem chi tiết danh sách xe</span>
+                <span>Xem chi tiết xe Isuzu FRR650 9 khối</span>
                 <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>

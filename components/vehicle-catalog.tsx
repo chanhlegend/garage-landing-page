@@ -473,7 +473,7 @@ function VehicleCatalogInner() {
               <ShieldCheck className="size-4" />
               ĐÓNG MỚI THEO YÊU CẦU
             </span>
-            <h3 className="font-sans text-2xl md:text-3xl font-bold uppercase tracking-tight text-foreground">
+            <h3 className="font-sans text-2xl md:text-3xl font-bold uppercase tracking-wide text-foreground">
               Không tìm thấy mẫu xe hoặc quy cách bạn cần?
             </h3>
             <p className="font-mono text-xs sm:text-sm text-muted-foreground leading-relaxed">

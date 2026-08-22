@@ -35,13 +35,13 @@ export function Logo({
     <div className={`flex items-center gap-2.5 ${className}`}>
       <LogoMark className={markSize} />
       {showText && (
-        <div className="flex flex-col leading-none">
+        <div className="flex flex-col leading-tight">
           <span
-            className={`font-sans font-extrabold uppercase tracking-tight text-foreground ${titleSize}`}
+            className={`font-sans font-extrabold uppercase tracking-wide text-foreground ${titleSize}`}
           >
             XE CHUYÊN DÙNG
           </span>
-          <span className="font-sans text-[11px] font-bold uppercase tracking-normal text-primary sm:text-xs">
+          <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-primary sm:text-xs">
             TÍN PHÁT
           </span>
         </div>

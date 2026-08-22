@@ -10,7 +10,6 @@ import {
   Clock,
   Phone,
   ArrowRight,
-  ShieldCheck,
   CheckCircle2,
   ExternalLink,
 } from 'lucide-react'
@@ -86,7 +85,7 @@ export function FacilitiesSection() {
             </span>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="mt-4 font-sans text-3xl font-bold uppercase leading-tight tracking-normal text-foreground sm:text-4xl md:text-5xl">
+            <h2 className="mt-4 font-sans text-3xl font-bold uppercase leading-[1.3] tracking-wide text-foreground sm:text-4xl md:text-5xl">
               Hệ Thống Nhà Máy & Showroom Tín Phát
             </h2>
           </Reveal>
@@ -176,29 +175,6 @@ export function FacilitiesSection() {
               </motion.div>
             )
           })}
-        </div>
-
-        {/* Bottom Banner Callout */}
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl border border-primary/30 bg-primary/10 p-6 backdrop-blur">
-          <div className="flex items-center gap-4">
-            <span className="grid size-12 place-items-center rounded-2xl bg-primary text-primary-foreground shrink-0">
-              <ShieldCheck className="size-6" />
-            </span>
-            <div>
-              <h4 className="font-sans text-base sm:text-lg font-bold uppercase text-foreground">
-                Quý khách có nhu cầu tham quan nhà máy hoặc xem xe mẫu?
-              </h4>
-              <p className="font-mono text-xs text-muted-foreground mt-0.5">
-                Vui lòng liên hệ trước hotline 0392 923 792 để Tín Phát chuẩn bị xe đón tiếp chu đáo nhất.
-              </p>
-            </div>
-          </div>
-          <a
-            href="tel:0392923792"
-            className="shrink-0 rounded-xl bg-accent px-6 py-3.5 font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-lg hover:shadow-accent/30 transition-all"
-          >
-            Đặt lịch xem xưởng
-          </a>
         </div>
       </div>
     </section>

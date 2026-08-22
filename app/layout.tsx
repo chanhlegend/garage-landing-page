@@ -4,13 +4,13 @@ import { Oswald, Inter } from 'next/font/google'
 import './globals.css'
 
 const oswald = Oswald({
-  subsets: ['latin'],
+  subsets: ['latin', 'vietnamese'],
   variable: '--font-sans',
   display: 'swap',
 })
 
 const inter = Inter({
-  subsets: ['latin'],
+  subsets: ['latin', 'vietnamese'],
   variable: '--font-mono',
   display: 'swap',
 })

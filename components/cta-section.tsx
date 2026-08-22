@@ -37,7 +37,7 @@ export function CtaSection() {
           </span>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="mt-5 max-w-3xl font-sans text-2xl font-extrabold uppercase leading-tight tracking-tight text-foreground sm:mt-6 sm:text-4xl md:text-5xl lg:text-6xl">
+          <h2 className="mt-5 max-w-3xl font-sans text-2xl font-extrabold uppercase leading-[1.3] tracking-wide text-foreground sm:mt-6 sm:text-4xl md:text-5xl lg:text-6xl">
             Sẵn Sàng Tìm
             <span className="block mt-2 bg-gradient-to-r from-red-600 via-red-500 to-rose-600 bg-clip-text text-transparent">
               Chiếc Xe Kế Tiếp?

@@ -50,9 +50,8 @@ export function AboutSection() {
             </span>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="mt-6 pt-1 text-balance font-sans text-3xl font-bold uppercase leading-[1.25] tracking-normal text-foreground sm:mt-7 sm:text-4xl md:text-6xl">
-              Chất Lượng Vượt Trội.
-              <br />
+            <h2 className="mt-6 pt-1 text-balance font-sans text-3xl font-bold uppercase leading-[1.3] tracking-wide text-foreground sm:mt-7 sm:text-4xl md:text-5xl lg:text-6xl flex flex-col gap-1.5 sm:gap-2">
+              <span>Chất Lượng Vượt Trội.</span>
               <span className="text-primary">Uy Tín Hàng Đầu Tín Phát.</span>
             </h2>
           </Reveal>

@@ -100,7 +100,7 @@ export default async function VehicleDetailPage({ params }: Props) {
                     Nhãn hiệu: <strong className="text-foreground">{vehicle.brand}</strong>
                   </span>
                 </div>
-                <h1 className="mt-4 font-sans text-2xl font-bold uppercase tracking-tight text-foreground sm:text-3xl">
+                <h1 className="mt-4 font-sans text-2xl font-bold uppercase tracking-wide text-foreground sm:text-3xl">
                   {vehicle.model}
                 </h1>
               </div>
@@ -184,7 +184,7 @@ export default async function VehicleDetailPage({ params }: Props) {
                 <span className="font-mono text-xs font-medium uppercase tracking-[0.3em] text-primary">
                   THÔNG TIN SẢN PHẨM
                 </span>
-                <h2 className="mt-2 font-sans text-2xl font-bold uppercase tracking-tight text-foreground sm:text-3xl">
+                <h2 className="mt-2 font-sans text-2xl font-bold uppercase tracking-wide text-foreground sm:text-3xl">
                   {vehicle.model}
                 </h2>
               </div>
@@ -276,7 +276,7 @@ export default async function VehicleDetailPage({ params }: Props) {
                 <span className="font-mono text-xs font-medium uppercase tracking-[0.3em] text-primary">
                   THÔNG SỐ KĨ THUẬT
                 </span>
-                <h2 className="mt-2 font-sans text-2xl font-bold uppercase tracking-tight text-foreground sm:text-3xl">
+                <h2 className="mt-2 font-sans text-2xl font-bold uppercase tracking-wide text-foreground sm:text-3xl">
                   Thông Số Kỹ Thuật Chi Tiết
                 </h2>
               </div>
@@ -433,7 +433,7 @@ export default async function VehicleDetailPage({ params }: Props) {
                 <span className="font-mono text-xs font-medium uppercase tracking-[0.3em] text-primary">
                   Sản phẩm tương tự
                 </span>
-                <h2 className="mt-2 font-sans text-2xl font-bold uppercase tracking-tight text-foreground sm:text-3xl">
+                <h2 className="mt-2 font-sans text-2xl font-bold uppercase tracking-wide text-foreground sm:text-3xl">
                   Các Mẫu Xe Cùng Danh Mục
                 </h2>
               </div>

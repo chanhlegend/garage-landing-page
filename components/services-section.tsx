@@ -42,7 +42,7 @@ export function ServicesSection() {
             </span>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="mt-6 pt-1 font-sans text-3xl font-bold uppercase leading-[1.25] tracking-normal text-foreground sm:mt-7 sm:text-4xl md:text-6xl">
+            <h2 className="mt-6 pt-1 font-sans text-3xl font-bold uppercase leading-[1.3] tracking-wide text-foreground sm:mt-7 sm:text-4xl md:text-5xl lg:text-6xl">
               Dịch Vụ Hậu Mãi Toàn Diện
             </h2>
           </Reveal>
@@ -91,7 +91,7 @@ export function ServicesSection() {
                     </div>
 
                     {/* Title & Summary */}
-                    <h3 className="mt-6 font-sans text-xl font-bold uppercase tracking-tight text-foreground md:text-2xl">
+                    <h3 className="mt-6 font-sans text-xl font-bold uppercase tracking-wide text-foreground md:text-2xl">
                       {item.title}
                     </h3>
                     <p className="mt-3 font-mono text-sm leading-relaxed text-muted-foreground line-clamp-3">
@@ -160,7 +160,7 @@ function ServiceDetailModal({
               <span className="font-mono text-[10px] font-medium uppercase tracking-widest text-primary">
                 Chi tiết dịch vụ
               </span>
-              <h3 className="font-sans text-lg font-bold uppercase tracking-tight text-foreground sm:text-xl line-clamp-1">
+              <h3 className="font-sans text-lg font-bold uppercase tracking-wide text-foreground sm:text-xl line-clamp-1">
                 {service.title}
               </h3>
             </div>

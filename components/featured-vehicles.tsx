@@ -58,7 +58,7 @@ export function FeaturedVehicles() {
               </span>
             </Reveal>
             <Reveal delay={0.1}>
-              <h2 className="mt-6 pt-1 font-sans text-3xl font-bold uppercase leading-[1.25] tracking-normal text-foreground sm:mt-7 sm:text-4xl md:text-6xl">
+              <h2 className="mt-6 pt-1 font-sans text-3xl font-bold uppercase leading-[1.3] tracking-wide text-foreground sm:mt-7 sm:text-4xl md:text-5xl lg:text-6xl">
                 Những mẫu xe nổi bật
               </h2>
             </Reveal>
@@ -237,7 +237,7 @@ function VehicleCard({
         {/* Content */}
         <div className="p-6">
           <p className="font-mono text-xs uppercase tracking-widest text-primary">{vehicle.brand}</p>
-          <h3 className="mt-1 font-sans text-xl font-bold uppercase tracking-tight text-foreground line-clamp-1 group-hover:text-primary transition-colors">
+          <h3 className="mt-1 font-sans text-xl font-bold uppercase tracking-wide text-foreground line-clamp-1 group-hover:text-primary transition-colors">
             {vehicle.model}
           </h3>
 
@@ -400,7 +400,7 @@ function VehicleDetailModal({
               <p className="mt-3 font-mono text-xs uppercase tracking-widest text-muted-foreground">
                 Hãng xe: <strong className="text-foreground">{vehicle.brand}</strong>
               </p>
-              <h2 className="mt-1 font-sans text-2xl font-bold uppercase tracking-tight text-foreground sm:text-3xl">
+              <h2 className="mt-1 font-sans text-2xl font-bold uppercase tracking-wide text-foreground sm:text-3xl">
                 {vehicle.model}
               </h2>
             </div>

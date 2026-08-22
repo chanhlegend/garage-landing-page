@@ -42,7 +42,7 @@ export function WhyChooseUs() {
           </span>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="mt-6 pt-1 max-w-2xl text-balance font-sans text-3xl font-bold uppercase leading-[1.25] tracking-normal text-foreground sm:mt-7 sm:text-4xl md:text-6xl">
+          <h2 className="mt-6 pt-1 max-w-2xl text-balance font-sans text-3xl font-bold uppercase leading-[1.3] tracking-wide text-foreground sm:mt-7 sm:text-4xl md:text-5xl lg:text-6xl">
             Lý do khách hàng tin chọn chúng tôi
           </h2>
         </Reveal>
@@ -60,7 +60,7 @@ export function WhyChooseUs() {
                   {r.no}
                 </span>
                 <r.icon className="mt-6 size-7 text-primary transition-transform duration-500 group-hover:scale-110" aria-hidden="true" />
-                <h3 className="mt-5 font-sans text-xl font-bold uppercase tracking-tight text-foreground">
+                <h3 className="mt-5 font-sans text-xl font-bold uppercase tracking-wide text-foreground">
                   {r.title}
                 </h3>
                 <p className="mt-3 font-mono text-sm leading-relaxed text-muted-foreground">

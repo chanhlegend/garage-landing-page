@@ -142,7 +142,7 @@ export function ContactSection() {
             </span>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="mt-6 pt-1 text-balance font-sans text-3xl font-bold uppercase leading-[1.25] tracking-normal text-foreground sm:mt-7 sm:text-4xl md:text-6xl">
+            <h2 className="mt-6 pt-1 text-balance font-sans text-3xl font-bold uppercase leading-[1.3] tracking-wide text-foreground sm:mt-7 sm:text-4xl md:text-5xl lg:text-6xl">
               Hãy Nói Chuyện Về Chiếc Xe Kế Tiếp Của Bạn.
             </h2>
           </Reveal>
