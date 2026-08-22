@@ -91,7 +91,7 @@ export function Hero() {
               transition={{ delay: 0.6, duration: 0.6 }}
               className="mt-5 max-w-xl text-pretty font-mono text-sm leading-relaxed text-muted-foreground sm:mt-6 sm:text-base"
             >
-              Đơn vị chuyên nhập khẩu, phân phối và đóng mới các chủng loại xe cẩu tự hành, xe chở rác, xe ép rác, xe hút bể phốt đạt chuẩn Đăng Kiểm với chính sách bảo hành 3 năm và hỗ trợ trả góp đến 85%.
+              Đơn vị chuyên nhập khẩu, phân phối và đóng mới các chủng loại xe cẩu tự hành, xe chở rác, xe ép rác, xe hút bể phốt đạt chuẩn Đăng Kiểm với chính sách bảo hành 3 năm và hỗ trợ trả góp lên đến 80%.
             </motion.p>
 
             <motion.div
@@ -206,7 +206,7 @@ export function Hero() {
                 </div>
                 <div className="space-y-0.5">
                   <span className="text-[10px] text-muted-foreground">Hỗ trợ vay</span>
-                  <p className="font-bold text-foreground">Đến 85%</p>
+                  <p className="font-bold text-foreground">Lên đến 80%</p>
                 </div>
               </div>
 
