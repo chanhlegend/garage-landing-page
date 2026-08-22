@@ -163,8 +163,8 @@ export function Hero() {
                     </span>
                   </div>
                 </div>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 px-3 py-1 font-mono text-[11px] font-semibold text-emerald-700 border border-emerald-500/20">
-                  <span className="size-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 px-3 py-1 font-mono text-[11px] font-semibold text-emerald-400 border border-emerald-500/30">
+                  <span className="size-1.5 rounded-full bg-emerald-400 animate-pulse" />
                   Sẵn xe giao ngay
                 </span>
               </div>

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   colorScheme: 'dark',
-  themeColor: '#141414',
+  themeColor: '#0f1013',
   width: 'device-width',
   initialScale: 1,
 }
@@ -37,6 +37,7 @@ export default function RootLayout({
     <html
       lang="vi"
       className={`dark ${oswald.variable} ${inter.variable}`}
+      style={{ colorScheme: 'dark' }}
       suppressHydrationWarning
     >
       <body className="bg-background font-mono antialiased overflow-x-hidden relative max-w-full">

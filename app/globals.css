@@ -33,37 +33,38 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-:root {
-  color-scheme: light;
+:root,
+.dark {
+  color-scheme: dark;
 
-  /* Automotive light palette */
-  --background: oklch(0.98 0.003 250);
-  --foreground: oklch(0.22 0.01 260);
+  /* Automotive Luxury Dark Palette */
+  --background: oklch(0.14 0.012 260);
+  --foreground: oklch(0.97 0.005 260);
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.22 0.01 260);
+  --card: oklch(0.18 0.014 260);
+  --card-foreground: oklch(0.97 0.005 260);
 
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.22 0.01 260);
+  --popover: oklch(0.18 0.014 260);
+  --popover-foreground: oklch(0.97 0.005 260);
 
-  /* Racing red accent */
-  --primary: oklch(0.57 0.23 25);
+  /* Racing Red Accent */
+  --primary: oklch(0.62 0.24 27);
   --primary-foreground: oklch(0.99 0 0);
 
-  --secondary: oklch(0.95 0.004 260);
-  --secondary-foreground: oklch(0.26 0.01 260);
+  --secondary: oklch(0.22 0.015 260);
+  --secondary-foreground: oklch(0.92 0.008 260);
 
-  --muted: oklch(0.955 0.004 260);
-  --muted-foreground: oklch(0.5 0.01 260);
+  --muted: oklch(0.20 0.012 260);
+  --muted-foreground: oklch(0.68 0.015 260);
 
-  --accent: oklch(0.62 0.21 32);
+  --accent: oklch(0.68 0.22 36);
   --accent-foreground: oklch(0.99 0 0);
 
-  --destructive: oklch(0.57 0.23 25);
+  --destructive: oklch(0.62 0.24 27);
 
-  --border: oklch(0.2 0.02 260 / 12%);
-  --input: oklch(0.2 0.02 260 / 16%);
-  --ring: oklch(0.57 0.23 25);
+  --border: oklch(0.30 0.015 260 / 45%);
+  --input: oklch(0.30 0.015 260 / 60%);
+  --ring: oklch(0.62 0.24 27);
 
   --radius: 0.5rem;
 }
@@ -123,9 +124,9 @@
     }
   }
   .glass {
-    background: color-mix(in oklch, var(--card) 55%, transparent);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    background: color-mix(in oklch, var(--card) 75%, transparent);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
   }
 
   @media (prefers-reduced-motion: reduce) {
