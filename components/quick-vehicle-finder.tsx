@@ -20,13 +20,13 @@ const segments = [
     id: "xe-cau",
     categoryName: "Xe Cẩu",
     title: "Xe Cẩu Tự Hành",
-    sub: "Cẩu Soosan, Unic, Kanglim",
-    desc: "Giải pháp nâng hạ và vận tải hàng hóa nặng, vật liệu xây dựng, lắp dựng nhà xưởng với cần cẩu thủy lực sức nâng từ 3 tấn đến 15 tấn.",
+    sub: "Cẩu Soosan 8T – 15T",
+    desc: "Giải pháp nâng hạ và vận tải hàng hóa nặng, vật liệu xây dựng, lắp dựng nhà xưởng với cần cẩu thủy lực Soosan sức nâng từ 8 tấn đến 15 tấn.",
     specs: [
-      { label: "Tải trọng xe", value: "3.5T - 15T" },
-      { label: "Sức nâng cần", value: "3T - 15 Tấn" },
-      { label: "Hãng cẩu", value: "Soosan, Unic, Kanglim" },
-      { label: "Xe cơ sở", value: "Hino, Isuzu, Hyundai, Chenglong" },
+      { label: "Tải trọng xe", value: "8 – 15 tấn" },
+      { label: "Sức nâng cần", value: "8T – 15 Tấn" },
+      { label: "Hãng cẩu", value: "Soosan" },
+      { label: "Xe cơ sở", value: "Hino, ISUZU, Hyundai, UD Trucks, Chenglong, Dongfeng" },
     ],
     image: "/cars/120.jpg",
     highlights: [
@@ -257,7 +257,7 @@ export function QuickVehicleFinder() {
                       </p>
                     </div>
                     <span className="rounded-lg bg-accent px-3 py-1 font-mono text-xs font-bold text-white uppercase">
-                      Hỗ trợ vay 60-80%
+                      Hỗ trợ vay lên đến 80%
                     </span>
                   </div>
                 </div>
